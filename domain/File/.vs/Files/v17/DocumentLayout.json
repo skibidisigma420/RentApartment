@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\7878\\kuku\\domain\\File\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A579532-7989-4CEC-963E-86FBD9A77698}|..\\ClassLibrary1\\ClassLibrary1.csproj|d:\\7878\\kuku\\domain\\classlibrary1\\filepath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F970C77-2ABF-C92C-B51C-921A647CDFA6}|Files.csproj|d:\\7878\\kuku\\domain\\file\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F970C77-2ABF-C92C-B51C-921A647CDFA6}|Files.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B55DA1F2-E7E2-4793-BEC0-9020137061B1}|..\\ClassLibrary2\\ClassLibrary2.csproj|d:\\7878\\kuku\\domain\\classlibrary2\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F970C77-2ABF-C92C-B51C-921A647CDFA6}|Files.csproj|d:\\7878\\kuku\\domain\\file\\files.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2F970C77-2ABF-C92C-B51C-921A647CDFA6}|Files.csproj|solutionrelative:files.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 224,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\7878\\kuku\\domain\\ClassLibrary2\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\ClassLibrary2\\Class1.cs",
+              "ToolTip": "D:\\7878\\kuku\\domain\\ClassLibrary2\\Class1.cs",
+              "RelativeToolTip": "..\\ClassLibrary2\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T18:08:13.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FilePath.cs",
+              "DocumentMoniker": "D:\\7878\\kuku\\domain\\ClassLibrary1\\FilePath.cs",
+              "RelativeDocumentMoniker": "..\\ClassLibrary1\\FilePath.cs",
+              "ToolTip": "D:\\7878\\kuku\\domain\\ClassLibrary1\\FilePath.cs",
+              "RelativeToolTip": "..\\ClassLibrary1\\FilePath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T18:04:13.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "user.cs",
+              "DocumentMoniker": "D:\\7878\\kuku\\domain\\File\\user.cs",
+              "RelativeDocumentMoniker": "user.cs",
+              "ToolTip": "D:\\7878\\kuku\\domain\\File\\user.cs",
+              "RelativeToolTip": "user.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T17:56:47.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Files",
+              "DocumentMoniker": "D:\\7878\\kuku\\domain\\File\\Files.csproj",
+              "RelativeDocumentMoniker": "Files.csproj",
+              "ToolTip": "D:\\7878\\kuku\\domain\\File\\Files.csproj",
+              "RelativeToolTip": "Files.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-16T17:55:07.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 71,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
