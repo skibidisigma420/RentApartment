@@ -1,0 +1,5 @@
+D:\7878\kurs\Kurs.Domain\obj\Debug\net9.0\Kurs.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\7878\kurs\Kurs.Domain\obj\Debug\net9.0\Kurs.Domain.AssemblyInfoInputs.cache
+D:\7878\kurs\Kurs.Domain\obj\Debug\net9.0\Kurs.Domain.AssemblyInfo.cs
+D:\7878\kurs\Kurs.Domain\obj\Debug\net9.0\Kurs.Domain.csproj.CoreCompileInputs.cache
+D:\7878\kurs\Kurs.Domain\obj\Debug\net9.0\Kurs.Domain.sourcelink.json
