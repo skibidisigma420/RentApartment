@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\7878\\kurs\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObj.csproj",
-      "projectName": "RentApartments.Domain.ValueObj",
-      "projectPath": "D:\\7878\\kurs\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObj.csproj",
+      "projectUniqueName": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj",
+      "projectName": "RentApartments.Domain.ValueObjects",
+      "projectPath": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj",
       "packagesPath": "C:\\Users\\esong\\.nuget\\packages\\",
-      "outputPath": "D:\\7878\\kurs\\RentApartments.Domain.ValueObj\\obj\\",
+      "outputPath": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\erf\\NuGetPackages"

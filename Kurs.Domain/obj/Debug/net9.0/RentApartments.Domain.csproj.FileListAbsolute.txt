@@ -1,0 +1,16 @@
+D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.deps.json
+D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.dll
+D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.pdb
+D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.ValueObjects.dll
+D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.ValueObjects.pdb
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.csproj.AssemblyReference.cache
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.AssemblyInfoInputs.cache
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.AssemblyInfo.cs
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.csproj.CoreCompileInputs.cache
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.sourcelink.json
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApar.84891EB3.Up2Date
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.dll
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\refint\RentApartments.Domain.dll
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.pdb
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\ref\RentApartments.Domain.dll

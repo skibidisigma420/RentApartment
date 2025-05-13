@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "RentApartments.Domain.ValueObjects/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RentApartments.Domain.ValueObjects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RentApartments.Domain.ValueObjects.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "RentApartments.Domain.ValueObjects/1.0.0": {
+      "type": "project",
+      "path": "../RentApartments.Domain.ValueObj/RentApartments.Domain.ValueObjects.csproj",
+      "msbuildProject": "../RentApartments.Domain.ValueObj/RentApartments.Domain.ValueObjects.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "RentApartments.Domain.ValueObjects >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\esong\\.nuget\\packages\\": {},
@@ -14,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\7878\\kurs\\Kurs.Domain\\RentApartments.Domain.csproj",
+      "projectUniqueName": "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj",
       "projectName": "RentApartments.Domain",
-      "projectPath": "D:\\7878\\kurs\\Kurs.Domain\\RentApartments.Domain.csproj",
+      "projectPath": "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj",
       "packagesPath": "C:\\Users\\esong\\.nuget\\packages\\",
-      "outputPath": "D:\\7878\\kurs\\Kurs.Domain\\obj\\",
+      "outputPath": "D:\\7878\\qwerty\\Kurs.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\erf\\NuGetPackages"
@@ -38,7 +57,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj": {
+              "projectPath": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
