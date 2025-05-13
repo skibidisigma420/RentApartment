@@ -1,8 +1,6 @@
 ﻿using RentApartments.Domain.Exceptions;
 using RentApartments.Domain.ValueObjects;
-using RentApartments.Domain.Entities;
 using RentApartments.Domain.Entities.Base;
-using System;
 
 namespace RentApartments.Domain.Entities
 {

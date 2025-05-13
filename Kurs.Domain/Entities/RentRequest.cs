@@ -1,7 +1,5 @@
 ﻿using RentApartments.Domain.ValueObjects;
 using RentApartments.Domain.Entities.Base;
-using RentApartments.Domain.Entities;
-using System;
 
 namespace RentApartments.Domain.Entities
 {

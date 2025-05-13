@@ -2,12 +2,8 @@
 using RentApartments.Domain.ValueObjects;
 using RentApartments.Domain.Enums;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using RentApartments.Domain.Entities;
 using RentApartments.Domain.Entities.Base;
-using System.Net;
-using System.Threading;
+
 
 namespace RentApartments.Domain.Entities
 {
@@ -25,7 +21,7 @@ namespace RentApartments.Domain.Entities
         #region Properties
 
         public Title Title { get; }
-        public Description Description { get; }
+        public Description Description { get; private set; }
         public Address Address { get; }
         public Money MonthlyRent { get; }
 
@@ -131,8 +127,9 @@ namespace RentApartments.Domain.Entities
             if (newDescription == null)
                 throw new ArgumentNullException(nameof(newDescription));
 
-            Description = newDescription;
+            Description = new Description(newDescription); 
         }
+
 
         #endregion
     }

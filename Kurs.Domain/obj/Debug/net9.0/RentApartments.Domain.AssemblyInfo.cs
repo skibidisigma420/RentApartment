@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RentApartments.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7cf77c0aefcc4fbe6873d93fcefbf6f123bfe2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f0fda7b69d51c09644ab2471a13f61041fe9280")]
 [assembly: System.Reflection.AssemblyProductAttribute("RentApartments.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RentApartments.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

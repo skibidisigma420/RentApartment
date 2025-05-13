@@ -1,0 +1,12 @@
+D:\7878\qwerty\RentApartments.Domain.ValueObj\bin\Debug\net9.0\RentApartments.Domain.ValueObjects.deps.json
+D:\7878\qwerty\RentApartments.Domain.ValueObj\bin\Debug\net9.0\RentApartments.Domain.ValueObjects.dll
+D:\7878\qwerty\RentApartments.Domain.ValueObj\bin\Debug\net9.0\RentApartments.Domain.ValueObjects.pdb
+D:\7878\qwerty\RentApartments.Domain.ValueObj\obj\Debug\net9.0\RentApartments.Domain.ValueObjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\7878\qwerty\RentApartments.Domain.ValueObj\obj\Debug\net9.0\RentApartments.Domain.ValueObjects.AssemblyInfoInputs.cache
+D:\7878\qwerty\RentApartments.Domain.ValueObj\obj\Debug\net9.0\RentApartments.Domain.ValueObjects.AssemblyInfo.cs
+D:\7878\qwerty\RentApartments.Domain.ValueObj\obj\Debug\net9.0\RentApartments.Domain.ValueObjects.csproj.CoreCompileInputs.cache
+D:\7878\qwerty\RentApartments.Domain.ValueObj\obj\Debug\net9.0\RentApartments.Domain.ValueObjects.sourcelink.json
+D:\7878\qwerty\RentApartments.Domain.ValueObj\obj\Debug\net9.0\RentApartments.Domain.ValueObjects.dll
+D:\7878\qwerty\RentApartments.Domain.ValueObj\obj\Debug\net9.0\refint\RentApartments.Domain.ValueObjects.dll
+D:\7878\qwerty\RentApartments.Domain.ValueObj\obj\Debug\net9.0\RentApartments.Domain.ValueObjects.pdb
+D:\7878\qwerty\RentApartments.Domain.ValueObj\obj\Debug\net9.0\ref\RentApartments.Domain.ValueObjects.dll

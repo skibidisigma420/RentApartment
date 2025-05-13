@@ -1,10 +1,6 @@
 ﻿using RentApartments.Domain.Exceptions;
 using RentApartments.Domain.Entities.Base;
-using RentApartments.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+using RentApartments.Domain.ValueObjects;
 using RentApartments.Domain.Enums;
 
 namespace RentApartments.Domain.Entities
