@@ -41,7 +41,7 @@ namespace RentApartments.Domain.Entities
         /// Changes the tenant's username.
         /// </summary>
         /// <param name="newUsername">New tenant's username.</param>
-        internal bool ChangeUsername(Username newUsername)
+        public bool ChangeUsername(Username newUsername)
         {
             if (Username == newUsername) return false;
             Username = newUsername;

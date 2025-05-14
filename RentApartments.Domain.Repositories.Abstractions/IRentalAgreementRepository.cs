@@ -7,5 +7,10 @@ namespace RentApartments.Domain.Repositories.Abstractions
     {
         Task<IEnumerable<RentalAgreement>> GetActiveByTenantIdAsync(Guid tenantId, CancellationToken cancellationToken);
         Task<IEnumerable<RentalAgreement>> GetActiveByLandlordIdAsync(Guid landlordId, CancellationToken cancellationToken);
+        Task<RentalAgreement?> GetByIdAsync(Guid id, CancellationToken cancellationToken);
+        Task<IEnumerable<RentalAgreement>> GetByTenantIdAsync(Guid tenantId, CancellationToken cancellationToken);
+        Task<RentalAgreement?> AddAsync(RentalAgreement agreement, CancellationToken cancellationToken);
+        Task UpdateAsync(RentalAgreement agreement, CancellationToken cancellationToken);
+
     }
 }

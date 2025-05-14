@@ -7,5 +7,8 @@ namespace RentApartments.Domain.Repositories.Abstractions
     {
         Task<IEnumerable<Apartment>> GetAllAvailableAsync(CancellationToken cancellationToken, bool asNoTracking = false);
         Task<IEnumerable<Apartment>> GetByLandlordIdAsync(Guid landlordId, CancellationToken cancellationToken, bool asNoTracking = false);
+        Task<IEnumerable<Apartment>> GetAvailableApartmentsAsync(CancellationToken cancellationToken);
+        Task<Apartment?> GetByIdAsync(Guid id, CancellationToken cancellationToken);
+
     }
 }

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="MassTransit" Version="8.3.1" />
+		<PackageReference Include="Otus.QueueDto" Version="1.0.5.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		
+		<ProjectReference Include="D:\7878\qwerty\RentApartments.Domain.Repositories.Abstractions\RentApartments.Domain.Repositories.Abstractions.csproj" />
+		<ProjectReference Include="D:\7878\qwerty\Kurs.Domain\RentApartments.Domain.csproj" />
+		<ProjectReference Include="D:\7878\qwerty\RentApartments.Application.Models\RentApartments.Application.Models.csproj" />
+	</ItemGroup>
+	
+</Project>
