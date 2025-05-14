@@ -1,0 +1,365 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\7878\\qwerty\\RentApartments.Application.Services\\RentApartments.Application.Services.csproj": {}
+  },
+  "projects": {
+    "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj",
+        "projectName": "RentApartments.Domain",
+        "projectPath": "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj",
+        "packagesPath": "C:\\Users\\esong\\.nuget\\packages\\",
+        "outputPath": "D:\\7878\\qwerty\\Kurs.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\erf\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\esong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj": {
+                "projectPath": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\7878\\qwerty\\RentApartments.Application.Models\\RentApartments.Application.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\7878\\qwerty\\RentApartments.Application.Models\\RentApartments.Application.Models.csproj",
+        "projectName": "RentApartments.Application.Models",
+        "projectPath": "D:\\7878\\qwerty\\RentApartments.Application.Models\\RentApartments.Application.Models.csproj",
+        "packagesPath": "C:\\Users\\esong\\.nuget\\packages\\",
+        "outputPath": "D:\\7878\\qwerty\\RentApartments.Application.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\erf\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\esong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\7878\\qwerty\\RentApartments.Application.Services\\RentApartments.Application.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\7878\\qwerty\\RentApartments.Application.Services\\RentApartments.Application.Services.csproj",
+        "projectName": "RentApartments.Application.Services",
+        "projectPath": "D:\\7878\\qwerty\\RentApartments.Application.Services\\RentApartments.Application.Services.csproj",
+        "packagesPath": "C:\\Users\\esong\\.nuget\\packages\\",
+        "outputPath": "D:\\7878\\qwerty\\RentApartments.Application.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\erf\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\esong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj": {
+                "projectPath": "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj"
+              },
+              "D:\\7878\\qwerty\\RentApartments.Application.Models\\RentApartments.Application.Models.csproj": {
+                "projectPath": "D:\\7878\\qwerty\\RentApartments.Application.Models\\RentApartments.Application.Models.csproj"
+              },
+              "D:\\7878\\qwerty\\RentApartments.Domain.Repositories.Abstractions\\RentApartments.Domain.Repositories.Abstractions.csproj": {
+                "projectPath": "D:\\7878\\qwerty\\RentApartments.Domain.Repositories.Abstractions\\RentApartments.Domain.Repositories.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.3.1, )"
+            },
+            "Otus.QueueDto": {
+              "target": "Package",
+              "version": "[1.0.5.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\7878\\qwerty\\RentApartments.Domain.Repositories.Abstractions\\RentApartments.Domain.Repositories.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\7878\\qwerty\\RentApartments.Domain.Repositories.Abstractions\\RentApartments.Domain.Repositories.Abstractions.csproj",
+        "projectName": "RentApartments.Domain.Repositories.Abstractions",
+        "projectPath": "D:\\7878\\qwerty\\RentApartments.Domain.Repositories.Abstractions\\RentApartments.Domain.Repositories.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\esong\\.nuget\\packages\\",
+        "outputPath": "D:\\7878\\qwerty\\RentApartments.Domain.Repositories.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\erf\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\esong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj": {
+                "projectPath": "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj",
+        "projectName": "RentApartments.Domain.ValueObjects",
+        "projectPath": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj",
+        "packagesPath": "C:\\Users\\esong\\.nuget\\packages\\",
+        "outputPath": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\erf\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\esong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
