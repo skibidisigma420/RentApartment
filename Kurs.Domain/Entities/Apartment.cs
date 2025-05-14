@@ -4,7 +4,6 @@ using RentApartments.Domain.Enums;
 using System;
 using RentApartments.Domain.Entities.Base;
 
-
 namespace RentApartments.Domain.Entities
 {
     /// <summary>
@@ -14,7 +13,7 @@ namespace RentApartments.Domain.Entities
     {
         #region Fields
 
-        private readonly ICollection<RentRequest> _rentRequests = [];
+        private readonly ICollection<RentRequest> _rentRequests = new List<RentRequest>();
 
         #endregion
 
@@ -24,16 +23,12 @@ namespace RentApartments.Domain.Entities
         public Description Description { get; private set; }
         public Address Address { get; }
         public Money MonthlyRent { get; }
+        public Landlord Landlord { get; }
 
         /// <summary>
         /// Current status of the apartment.
         /// </summary>
         public ApartmentStatus Status { get; private set; }
-
-        /// <summary>
-        /// Owner (landlord) of the apartment.
-        /// </summary>
-        public Landlord Landlord { get; }
 
         /// <summary>
         /// Last rent request submitted by a tenant.
@@ -50,6 +45,7 @@ namespace RentApartments.Domain.Entities
         #region Constructors
 
         protected Apartment() { }
+
         public Apartment(
             Guid id,
             Title title,
@@ -59,11 +55,11 @@ namespace RentApartments.Domain.Entities
             Landlord landlord
         ) : base(id)
         {
-            Title = title ?? throw new ArgumentNullValueException(nameof(title));
-            Description = description ?? throw new ArgumentNullValueException(nameof(description));
-            Address = address ?? throw new ArgumentNullValueException(nameof(address));
-            MonthlyRent = monthlyRent ?? throw new ArgumentNullValueException(nameof(monthlyRent));
-            Landlord = landlord ?? throw new ArgumentNullValueException(nameof(landlord));
+            Title = title ?? throw new ArgumentNullException(nameof(title));
+            Description = description ?? throw new ArgumentNullException(nameof(description));
+            Address = address ?? throw new ArgumentNullException(nameof(address));
+            MonthlyRent = monthlyRent ?? throw new ArgumentNullException(nameof(monthlyRent));
+            Landlord = landlord ?? throw new ArgumentNullException(nameof(landlord));
             Status = ApartmentStatus.Available;
         }
 
@@ -114,6 +110,7 @@ namespace RentApartments.Domain.Entities
             _rentRequests.Add(request);
             return true;
         }
+
         public void ChangeStatus(ApartmentStatus newStatus)
         {
             // Проверяем, не является ли статус тем же, что уже установлен
@@ -122,14 +119,14 @@ namespace RentApartments.Domain.Entities
 
             Status = newStatus;
         }
+
         public void UpdateDescription(string newDescription)
         {
             if (newDescription == null)
                 throw new ArgumentNullException(nameof(newDescription));
 
-            Description = new Description(newDescription); 
+            Description = new Description(newDescription);
         }
-
 
         #endregion
     }
