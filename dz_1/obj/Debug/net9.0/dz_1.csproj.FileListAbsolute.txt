@@ -1,0 +1,14 @@
+D:\7878\domash\dz_1\bin\Debug\net9.0\dz_1.exe
+D:\7878\domash\dz_1\bin\Debug\net9.0\dz_1.deps.json
+D:\7878\domash\dz_1\bin\Debug\net9.0\dz_1.runtimeconfig.json
+D:\7878\domash\dz_1\bin\Debug\net9.0\dz_1.dll
+D:\7878\domash\dz_1\bin\Debug\net9.0\dz_1.pdb
+D:\7878\domash\dz_1\obj\Debug\net9.0\dz_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\7878\domash\dz_1\obj\Debug\net9.0\dz_1.AssemblyInfoInputs.cache
+D:\7878\domash\dz_1\obj\Debug\net9.0\dz_1.AssemblyInfo.cs
+D:\7878\domash\dz_1\obj\Debug\net9.0\dz_1.csproj.CoreCompileInputs.cache
+D:\7878\domash\dz_1\obj\Debug\net9.0\dz_1.dll
+D:\7878\domash\dz_1\obj\Debug\net9.0\refint\dz_1.dll
+D:\7878\domash\dz_1\obj\Debug\net9.0\dz_1.pdb
+D:\7878\domash\dz_1\obj\Debug\net9.0\dz_1.genruntimeconfig.cache
+D:\7878\domash\dz_1\obj\Debug\net9.0\ref\dz_1.dll

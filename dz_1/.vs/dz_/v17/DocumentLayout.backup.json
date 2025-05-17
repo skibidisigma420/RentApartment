@@ -1,0 +1,231 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\7878\\domash\\dz_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFADF47-A193-43F7-A679-E69AA4C97921}|..\\dz_3\\dz_3.csproj|d:\\7878\\domash\\dz_3\\services\\excelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFADF47-A193-43F7-A679-E69AA4C97921}|..\\dz_3\\dz_3.csproj|d:\\7878\\domash\\dz_3\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFADF47-A193-43F7-A679-E69AA4C97921}|..\\dz_3\\dz_3.csproj|d:\\7878\\domash\\dz_3\\models\\factory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFADF47-A193-43F7-A679-E69AA4C97921}|..\\dz_3\\dz_3.csproj|d:\\7878\\domash\\dz_3\\interfaces\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFADF47-A193-43F7-A679-E69AA4C97921}|..\\dz_3\\dz_3.csproj|d:\\7878\\domash\\dz_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFADF47-A193-43F7-A679-E69AA4C97921}|..\\dz_3\\dz_3.csproj|d:\\7878\\domash\\dz_3\\ui\\userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFADF47-A193-43F7-A679-E69AA4C97921}|..\\dz_3\\dz_3.csproj|d:\\7878\\domash\\dz_3\\models\\tank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFADF47-A193-43F7-A679-E69AA4C97921}|..\\dz_3\\dz_3.csproj|d:\\7878\\domash\\dz_3\\models\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CF74CED-134A-45D4-AC7F-7C3BE74E5C7D}|..\\dz_2.2_chast\\dz_2.2_chast.csproj|d:\\7878\\domash\\dz_2.2_chast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157AC768-3E6B-4BEE-A83D-D0D9D3FAC250}|..\\dz_2\\dz_2.csproj|d:\\7878\\domash\\dz_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2044AF47-2D4E-456B-88FB-323567006119}|dz_1.csproj|d:\\7878\\domash\\dz_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2044AF47-2D4E-456B-88FB-323567006119}|dz_1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 30,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserInterface.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_3\\UI\\UserInterface.cs",
+              "RelativeDocumentMoniker": "..\\dz_3\\UI\\UserInterface.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_3\\UI\\UserInterface.cs",
+              "RelativeToolTip": "..\\dz_3\\UI\\UserInterface.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:07:05.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExcelService.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_3\\Services\\ExcelService.cs",
+              "RelativeDocumentMoniker": "..\\dz_3\\Services\\ExcelService.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_3\\Services\\ExcelService.cs",
+              "RelativeToolTip": "..\\dz_3\\Services\\ExcelService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:06:45.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataService.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_3\\Services\\DataService.cs",
+              "RelativeDocumentMoniker": "..\\dz_3\\Services\\DataService.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_3\\Services\\DataService.cs",
+              "RelativeToolTip": "..\\dz_3\\Services\\DataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:06:23.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Tank.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_3\\Models\\Tank.cs",
+              "RelativeDocumentMoniker": "..\\dz_3\\Models\\Tank.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_3\\Models\\Tank.cs",
+              "RelativeToolTip": "..\\dz_3\\Models\\Tank.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:06:04.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_3\\Models\\Unit.cs",
+              "RelativeDocumentMoniker": "..\\dz_3\\Models\\Unit.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_3\\Models\\Unit.cs",
+              "RelativeToolTip": "..\\dz_3\\Models\\Unit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:05:45.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Factory.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_3\\Models\\Factory.cs",
+              "RelativeDocumentMoniker": "..\\dz_3\\Models\\Factory.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_3\\Models\\Factory.cs",
+              "RelativeToolTip": "..\\dz_3\\Models\\Factory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:05:24.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IEntity.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_3\\Interfaces\\IEntity.cs",
+              "RelativeDocumentMoniker": "..\\dz_3\\Interfaces\\IEntity.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_3\\Interfaces\\IEntity.cs",
+              "RelativeToolTip": "..\\dz_3\\Interfaces\\IEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:05:06.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_3\\Program.cs",
+              "RelativeDocumentMoniker": "..\\dz_3\\Program.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_3\\Program.cs",
+              "RelativeToolTip": "..\\dz_3\\Program.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:03:12.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_2.2_chast\\Program.cs",
+              "RelativeDocumentMoniker": "..\\dz_2.2_chast\\Program.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_2.2_chast\\Program.cs",
+              "RelativeToolTip": "..\\dz_2.2_chast\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T20:52:56.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_2\\Program.cs",
+              "RelativeDocumentMoniker": "..\\dz_2\\Program.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_2\\Program.cs",
+              "RelativeToolTip": "..\\dz_2\\Program.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwMoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T20:51:13.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\7878\\domash\\dz_1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\7878\\domash\\dz_1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T20:48:28.762Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 331,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

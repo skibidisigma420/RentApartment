@@ -1,0 +1,17 @@
+D:\7878\domash\dz_3\bin\Debug\net9.0\dz_3.exe
+D:\7878\domash\dz_3\bin\Debug\net9.0\dz_3.deps.json
+D:\7878\domash\dz_3\bin\Debug\net9.0\dz_3.runtimeconfig.json
+D:\7878\domash\dz_3\bin\Debug\net9.0\dz_3.dll
+D:\7878\domash\dz_3\bin\Debug\net9.0\dz_3.pdb
+D:\7878\domash\dz_3\bin\Debug\net9.0\Microsoft.Office.Interop.Excel.dll
+D:\7878\domash\dz_3\obj\Debug\net9.0\dz_3.csproj.AssemblyReference.cache
+D:\7878\domash\dz_3\obj\Debug\net9.0\dz_3.GeneratedMSBuildEditorConfig.editorconfig
+D:\7878\domash\dz_3\obj\Debug\net9.0\dz_3.AssemblyInfoInputs.cache
+D:\7878\domash\dz_3\obj\Debug\net9.0\dz_3.AssemblyInfo.cs
+D:\7878\domash\dz_3\obj\Debug\net9.0\dz_3.csproj.CoreCompileInputs.cache
+D:\7878\domash\dz_3\obj\Debug\net9.0\dz_3.csproj.Up2Date
+D:\7878\domash\dz_3\obj\Debug\net9.0\dz_3.dll
+D:\7878\domash\dz_3\obj\Debug\net9.0\refint\dz_3.dll
+D:\7878\domash\dz_3\obj\Debug\net9.0\dz_3.pdb
+D:\7878\domash\dz_3\obj\Debug\net9.0\dz_3.genruntimeconfig.cache
+D:\7878\domash\dz_3\obj\Debug\net9.0\ref\dz_3.dll

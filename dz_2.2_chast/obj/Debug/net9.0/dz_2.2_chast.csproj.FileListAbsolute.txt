@@ -1,0 +1,14 @@
+D:\7878\domash\dz_2.2_chast\bin\Debug\net9.0\dz_2.2_chast.exe
+D:\7878\domash\dz_2.2_chast\bin\Debug\net9.0\dz_2.2_chast.deps.json
+D:\7878\domash\dz_2.2_chast\bin\Debug\net9.0\dz_2.2_chast.runtimeconfig.json
+D:\7878\domash\dz_2.2_chast\bin\Debug\net9.0\dz_2.2_chast.dll
+D:\7878\domash\dz_2.2_chast\bin\Debug\net9.0\dz_2.2_chast.pdb
+D:\7878\domash\dz_2.2_chast\obj\Debug\net9.0\dz_2.2_chast.GeneratedMSBuildEditorConfig.editorconfig
+D:\7878\domash\dz_2.2_chast\obj\Debug\net9.0\dz_2.2_chast.AssemblyInfoInputs.cache
+D:\7878\domash\dz_2.2_chast\obj\Debug\net9.0\dz_2.2_chast.AssemblyInfo.cs
+D:\7878\domash\dz_2.2_chast\obj\Debug\net9.0\dz_2.2_chast.csproj.CoreCompileInputs.cache
+D:\7878\domash\dz_2.2_chast\obj\Debug\net9.0\dz_2.2_chast.dll
+D:\7878\domash\dz_2.2_chast\obj\Debug\net9.0\refint\dz_2.2_chast.dll
+D:\7878\domash\dz_2.2_chast\obj\Debug\net9.0\dz_2.2_chast.pdb
+D:\7878\domash\dz_2.2_chast\obj\Debug\net9.0\dz_2.2_chast.genruntimeconfig.cache
+D:\7878\domash\dz_2.2_chast\obj\Debug\net9.0\ref\dz_2.2_chast.dll
