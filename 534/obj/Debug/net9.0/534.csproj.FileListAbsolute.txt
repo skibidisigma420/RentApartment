@@ -1,0 +1,14 @@
+D:\7878\kuku\534\bin\Debug\net9.0\534.exe
+D:\7878\kuku\534\bin\Debug\net9.0\534.deps.json
+D:\7878\kuku\534\bin\Debug\net9.0\534.runtimeconfig.json
+D:\7878\kuku\534\bin\Debug\net9.0\534.dll
+D:\7878\kuku\534\bin\Debug\net9.0\534.pdb
+D:\7878\kuku\534\obj\Debug\net9.0\534.GeneratedMSBuildEditorConfig.editorconfig
+D:\7878\kuku\534\obj\Debug\net9.0\534.AssemblyInfoInputs.cache
+D:\7878\kuku\534\obj\Debug\net9.0\534.AssemblyInfo.cs
+D:\7878\kuku\534\obj\Debug\net9.0\534.csproj.CoreCompileInputs.cache
+D:\7878\kuku\534\obj\Debug\net9.0\534.dll
+D:\7878\kuku\534\obj\Debug\net9.0\refint\534.dll
+D:\7878\kuku\534\obj\Debug\net9.0\534.pdb
+D:\7878\kuku\534\obj\Debug\net9.0\534.genruntimeconfig.cache
+D:\7878\kuku\534\obj\Debug\net9.0\ref\534.dll
