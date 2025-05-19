@@ -11,41 +11,58 @@ namespace RentApartments.Domain.Entities
     /// </summary>
     public class Apartment : Entity<Guid>
     {
-        #region Fields
-
         private readonly ICollection<RentRequest> _rentRequests = new List<RentRequest>();
-
-        #endregion
-
-        #region Properties
 
         public Title Title { get; }
         public Description Description { get; private set; }
         public Address Address { get; }
         public Money MonthlyRent { get; }
         public Landlord Landlord { get; }
-
-        /// <summary>
-        /// Current status of the apartment.
-        /// </summary>
         public ApartmentStatus Status { get; private set; }
 
-        /// <summary>
-        /// Last rent request submitted by a tenant.
-        /// </summary>
         public RentRequest? LastRequest => _rentRequests.OrderByDescending(r => r.RequestDate).FirstOrDefault();
-
-        /// <summary>
-        /// Is apartment currently available for rent.
-        /// </summary>
         public bool IsAvailable => Status == ApartmentStatus.Available;
-
-        #endregion
 
         #region Constructors
 
+        // Для ORM / сериализации
         protected Apartment() { }
 
+        /// <summary>
+        /// Основной защищённый конструктор с полной инициализацией.
+        /// Используется как точка централизованной валидации и создания.
+        /// </summary>
+        protected Apartment(
+        Guid id,
+        Title title,
+        Description description,
+        Address address,
+        Money monthlyRent,
+        Landlord landlord,
+        ApartmentStatus status) : base(id)
+        {
+            if (monthlyRent.Value <= 0)
+                throw new InvalidApartmentMonthlyRentException(this, monthlyRent);
+
+            if (status == ApartmentStatus.Available && landlord.ActiveApartments.Any(a => a.Address == address))
+                throw new ApartmentAlreadyRentedException(this, address);
+
+            if (landlord == null)
+                throw new ArgumentNullValueException(nameof(landlord));
+
+            Title = title ?? throw new ArgumentNullValueException(nameof(title));
+            Description = description ?? throw new ArgumentNullValueException(nameof(description));
+            Address = address ?? throw new ArgumentNullValueException(nameof(address));
+            MonthlyRent = monthlyRent ?? throw new ArgumentNullValueException(nameof(monthlyRent));
+            Landlord = landlord;
+            Status = status;
+        }
+
+
+        /// <summary>
+        /// Публичный конструктор для создания новой квартиры.
+        /// Устанавливает статус по умолчанию — Available.
+        /// </summary>
         public Apartment(
             Guid id,
             Title title,
@@ -53,49 +70,34 @@ namespace RentApartments.Domain.Entities
             Address address,
             Money monthlyRent,
             Landlord landlord
-        ) : base(id)
+        ) : this(id, title, description, address, monthlyRent, landlord, ApartmentStatus.Available)
         {
-            Title = title ?? throw new ArgumentNullException(nameof(title));
-            Description = description ?? throw new ArgumentNullException(nameof(description));
-            Address = address ?? throw new ArgumentNullException(nameof(address));
-            MonthlyRent = monthlyRent ?? throw new ArgumentNullException(nameof(monthlyRent));
-            Landlord = landlord ?? throw new ArgumentNullException(nameof(landlord));
-            Status = ApartmentStatus.Available;
         }
 
-        #endregion
+        #endregion // Constructors
 
-        #region Methods
 
-        /// <summary>
-        /// Set apartment as unavailable (e.g., rented or temporarily removed).
-        /// </summary>
         public bool SetUnavailable()
         {
             if (!IsAvailable)
-                return false;
+                throw new ApartmentIsNotAvailableException(this);
 
             Status = ApartmentStatus.Unavailable;
             return true;
         }
 
-        /// <summary>
-        /// Marks the apartment as rented (after landlord accepts a request).
-        /// </summary>
         public bool SetRented()
         {
-            if (!IsAvailable || !_rentRequests.Any())
-                return false;
+            if (!IsAvailable)
+                throw new ApartmentIsNotAvailableException(this);
+
+            if (!_rentRequests.Any(r => r.Status == RentRequestStatus.Approved))
+                throw new ApartmentRentRequestMissingException(this);
 
             Status = ApartmentStatus.Rented;
             return true;
         }
 
-        /// <summary>
-        /// Handles a rent request from a tenant.
-        /// </summary>
-        /// <param name="request">The rent request.</param>
-        /// <returns>true if request was accepted; otherwise false.</returns>
         public bool AddRentRequest(RentRequest request)
         {
             if (!ReferenceEquals(request.Apartment, this))
@@ -105,29 +107,42 @@ namespace RentApartments.Domain.Entities
                 throw new DuplicateRentRequestException(this, request);
 
             if (!IsAvailable)
-                return false;
+                throw new ApartmentIsNotAvailableException(this);
 
             _rentRequests.Add(request);
             return true;
         }
-
         public void ChangeStatus(ApartmentStatus newStatus)
         {
-            // Проверяем, не является ли статус тем же, что уже установлен
             if (Status == newStatus)
                 return;
+
+            if (!IsStatusTransitionValid(newStatus))
+                throw new InvalidApartmentStatusTransitionException(this, Status, newStatus);
 
             Status = newStatus;
         }
 
-        public void UpdateDescription(string newDescription)
+        private bool IsStatusTransitionValid(ApartmentStatus newStatus)
         {
-            if (newDescription == null)
-                throw new ArgumentNullException(nameof(newDescription));
-
-            Description = new Description(newDescription);
+            return (Status, newStatus) switch
+            {
+                (ApartmentStatus.Available, ApartmentStatus.Rented) => _rentRequests.Any(r => r.Status == RentRequestStatus.Approved),
+                (ApartmentStatus.Rented, ApartmentStatus.Available) => false, // запрещаем напрямую
+                (ApartmentStatus.Unavailable, ApartmentStatus.Available) => true,
+                (_, _) => true // разрешаем остальные
+            };
         }
 
-        #endregion
+        public void UpdateDescription(string newDescription)
+        {
+            if (string.IsNullOrWhiteSpace(newDescription))
+                throw new ArgumentException("Description cannot be empty or whitespace.", nameof(newDescription));
+
+            Description = new Description(newDescription); // или Description.Create(newDescription);
+        }
+
+
     }
+
 }

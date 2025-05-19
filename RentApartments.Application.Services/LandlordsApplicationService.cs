@@ -9,51 +9,41 @@ namespace RentApartments.Application.Services
 {
     public class LandlordsApplicationService(
         ILandlordRepository landlordRepository,
-        IMapper mapper)
-        : ILandlordsApplicationService
+        IMapper mapper) : ILandlordsApplicationService
     {
-        public async Task<LandlordModel?> GetLandlordByIdAsync(Guid id, CancellationToken cancellationToken)
+        public async Task<LandlordModel?> GetLandlordByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
             var landlord = await landlordRepository.GetByIdAsync(id, cancellationToken);
-            return landlord is null ? null : MapToModel(landlord);
+            return landlord is null ? null : mapper.Map<LandlordModel>(landlord);
         }
 
-        public async Task<LandlordModel?> GetLandlordByUsernameAsync(string username, CancellationToken cancellationToken)
+        public async Task<LandlordModel?> GetLandlordByUsernameAsync(string username, CancellationToken cancellationToken = default)
         {
             var landlord = await landlordRepository.GetByUsernameAsync(new Username(username), cancellationToken);
-            return landlord is null ? null : MapToModel(landlord);
+            return landlord is null ? null : mapper.Map<LandlordModel>(landlord);
         }
 
-        public async Task<IEnumerable<LandlordModel>> GetLandlordsAsync(CancellationToken cancellationToken)
+        public async Task<IEnumerable<LandlordModel>> GetLandlordsAsync(CancellationToken cancellationToken = default)
         {
             var landlords = await landlordRepository.GetAllAsync(cancellationToken);
-            return landlords.Select(MapToModel);
+            return mapper.Map<IEnumerable<LandlordModel>>(landlords);
         }
 
-        public async Task<LandlordModel?> CreateLandlordAsync(CreateLandlordModel landlordInformation, CancellationToken cancellationToken)
+        public async Task<LandlordModel?> CreateLandlordAsync(CreateLandlordModel landlordInformation, CancellationToken cancellationToken = default)
         {
             var landlord = new Landlord(Guid.NewGuid(), new Username(landlordInformation.Username));
 
             var created = await landlordRepository.AddAsync(landlord, cancellationToken);
-            return created is null ? null : MapToModel(created);
+            return created is null ? null : mapper.Map<LandlordModel>(created);
         }
 
-        public async Task<bool> DeleteLandlordAsync(Guid id, CancellationToken cancellationToken)
+        public async Task<bool> DeleteLandlordAsync(Guid id, CancellationToken cancellationToken = default)
         {
             var landlord = await landlordRepository.GetByIdAsync(id, cancellationToken);
             if (landlord is null)
                 return false;
 
             return await landlordRepository.DeleteAsync(landlord, cancellationToken);
-        }
-
-        private static LandlordModel MapToModel(Landlord landlord)
-        {
-            return new LandlordModel(
-                landlord.Id,
-                landlord.Username.Value,
-                landlord.ActiveApartments.Select(a => a.Id).ToList().AsReadOnly()
-            );
         }
     }
 }

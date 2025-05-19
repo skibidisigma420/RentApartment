@@ -1,4 +1,5 @@
-﻿using RentApartments.Application.Models.RentalAgreement;
+﻿using AutoMapper;
+using RentApartments.Application.Models.RentalAgreement;
 using RentApartments.Application.Services.Abstractions;
 using RentApartments.Domain.Entities;
 using RentApartments.Domain.Repositories.Abstractions;
@@ -10,50 +11,43 @@ namespace RentApartments.Application.Services
         IRentalAgreementRepository rentalAgreementRepository,
         IApartmentRepository apartmentRepository,
         ITenantRepository tenantRepository,
-        ILandlordRepository landlordRepository)
-        : IRentalAgreementsApplicationService
+        ILandlordRepository landlordRepository,
+        IMapper mapper) : IRentalAgreementsApplicationService
     {
-        public async Task<RentalAgreementModel?> GetAgreementByIdAsync(Guid id, CancellationToken cancellationToken)
+        public async Task<RentalAgreementModel?> GetAgreementByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
             var agreement = await rentalAgreementRepository.GetByIdAsync(id, cancellationToken);
-            return agreement is null ? null : MapToModel(agreement);
+            return agreement is null ? null : mapper.Map<RentalAgreementModel>(agreement);
         }
 
-        public async Task<IEnumerable<RentalAgreementModel>> GetAgreementsByTenantIdAsync(Guid tenantId, CancellationToken cancellationToken)
+        public async Task<IEnumerable<RentalAgreementModel>> GetAgreementsByTenantIdAsync(Guid tenantId, CancellationToken cancellationToken = default)
         {
             var agreements = await rentalAgreementRepository.GetByTenantIdAsync(tenantId, cancellationToken);
-            return agreements.Select(MapToModel);
+            return mapper.Map<IEnumerable<RentalAgreementModel>>(agreements);
         }
 
-        public async Task<RentalAgreementModel?> CreateAgreementAsync(CreateRentalAgreementModel agreementInformation, CancellationToken cancellationToken)
+        public async Task<RentalAgreementModel?> CreateAgreementAsync(CreateRentalAgreementModel agreementInformation, CancellationToken cancellationToken = default)
         {
             var apartment = await apartmentRepository.GetByIdAsync(agreementInformation.ApartmentId, cancellationToken);
-            if (apartment is null)
-                return null;
-
             var tenant = await tenantRepository.GetByIdAsync(agreementInformation.TenantId, cancellationToken);
-            if (tenant is null)
-                return null;
-
             var landlord = await landlordRepository.GetByIdAsync(agreementInformation.LandlordId, cancellationToken);
-            if (landlord is null)
+
+            if (apartment is null || tenant is null || landlord is null)
                 return null;
 
             var agreement = new RentalAgreement(
-                Guid.NewGuid(),
                 apartment,
                 tenant,
                 landlord,
                 new Money(agreementInformation.MonthlyRent),
                 agreementInformation.StartDate,
-                agreementInformation.CreationDate
-            );
+                agreementInformation.CreationDate);
 
             var created = await rentalAgreementRepository.AddAsync(agreement, cancellationToken);
-            return created is null ? null : MapToModel(created);
+            return created is null ? null : mapper.Map<RentalAgreementModel>(created);
         }
 
-        public async Task<bool> TerminateAgreementAsync(Guid agreementId, DateTime endDate, CancellationToken cancellationToken)
+        public async Task<bool> TerminateAgreementAsync(Guid agreementId, DateTime endDate, CancellationToken cancellationToken = default)
         {
             var agreement = await rentalAgreementRepository.GetByIdAsync(agreementId, cancellationToken);
             if (agreement is null)
@@ -62,27 +56,12 @@ namespace RentApartments.Application.Services
             try
             {
                 agreement.Terminate(endDate);
-                await rentalAgreementRepository.UpdateAsync(agreement, cancellationToken);
-                return true;
+                return await rentalAgreementRepository.UpdateAsync(agreement, cancellationToken);
             }
             catch
             {
                 return false;
             }
-        }
-
-        private static RentalAgreementModel MapToModel(RentalAgreement agreement)
-        {
-            return new RentalAgreementModel(
-                agreement.Id,
-                agreement.Apartment.Id,
-                agreement.Tenant.Id,
-                agreement.Landlord.Id,
-                agreement.MonthlyRent.Value,
-                agreement.StartDate,
-                agreement.EndDate,
-                agreement.IsActive
-            );
         }
     }
 }

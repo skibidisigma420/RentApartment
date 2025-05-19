@@ -6,14 +6,14 @@ using RentApartments.Domain.Enums;
 namespace RentApartments.Domain.Entities
 {
     /// <summary>
-    /// Represents the tenant at the apartment rental service.
+    /// класс представляющий арендатора в системе аренды квартир
     /// </summary>
     public class Tenant(Guid id, Username username) : Entity<Guid>(id)
     {
         #region Fields
 
         /// <summary>
-        /// The tenant's observable rental apartments.
+        /// приватная коллекция квартир, которые арендатор отслеживает/добавил в избранное
         /// </summary>
         private readonly ICollection<Apartment> _observableApartments = [];
 
@@ -22,13 +22,15 @@ namespace RentApartments.Domain.Entities
         #region Properties
 
         /// <summary> 
-        /// Gets the tenant's Username. 
+        /// имя пользователя арендатора
+        /// тип Username value object
         /// </summary>
         public Username Username { get; private set; } = username ?? throw new ArgumentNullException(nameof(username));
 
-
         /// <summary>
-        /// Gets the read-only collection of the tenant's observable apartments.
+        /// коллекция доступных для аренды квартир, которые отслеживает арендатор
+        /// возвращает IReadOnlyCollection<Apartment>неизменяемую коллекцию
+        /// только квартиры со статусом ApartmentStatus.Available
         /// </summary>
         public IReadOnlyCollection<Apartment> ObservableApartments =>
             _observableApartments.Where(apartment => apartment.Status == ApartmentStatus.Available).ToList().AsReadOnly();
@@ -38,49 +40,68 @@ namespace RentApartments.Domain.Entities
         #region Methods
 
         /// <summary>
-        /// Changes the tenant's username.
+        /// изменяет имя пользователя арендатора
         /// </summary>
-        /// <param name="newUsername">New tenant's username.</param>
         public bool ChangeUsername(Username newUsername)
         {
+            if (newUsername == null)
+                throw new ArgumentNullException(nameof(newUsername));
+
             if (Username == newUsername) return false;
+
             Username = newUsername;
             return true;
         }
 
+
         /// <summary>
-        /// Adds an apartment to the sequence of observable apartments.
+        /// добавляет квартиру в список отслеживаемых
+        /// если квартира уже в списке ничего не делает
         /// </summary>
-        /// <param name="apartment">An observable apartment.</param>
         public void AddObservableApartment(Apartment apartment)
         {
+            if (apartment == null)
+                throw new NullApartmentException();
+
             if (_observableApartments.Contains(apartment))
                 return;
+
             _observableApartments.Add(apartment);
         }
 
+
+
         /// <summary>
-        /// Requests to rent an apartment.
+        /// создать запрос на аренду квартиры
         /// </summary>
-        /// <param name="apartment">Apartment to rent.</param>
-        /// <returns>true if the request to rent was successfully made; otherwise false.</returns>
         public bool TryRentApartment(Apartment apartment)
         {
-            if (apartment.Status != ApartmentStatus.Available)
-                return false; // Can't rent unavailable apartments
+            if (apartment == null)
+                throw new NullApartmentException();
 
-            // Make the rent request
-            RentRequest newRequest = new(apartment, this, apartment.Landlord);
-            apartment.AddRentRequest(newRequest);
+            if (apartment.Status != ApartmentStatus.Available)
+                throw new ApartmentIsNotAvailableException(apartment);
+
+
+            var newRequest = new RentRequest(apartment, this, apartment.Landlord);
+
+            if (!apartment.AddRentRequest(newRequest))
+                return false;
+
+            AddObservableApartment(apartment);
             return true;
         }
 
+
+
         /// <summary>
-        /// Mark an apartment as a favorite (observable).
+        /// добавляет квартиру в избранное
         /// </summary>
-        /// <param name="apartment">Apartment to add to favorites.</param>
         public void MarkAsFavorite(Apartment apartment)
         {
+            if (apartment == null)
+                throw new ArgumentNullException(nameof(apartment));
+
             AddObservableApartment(apartment);
         }
 

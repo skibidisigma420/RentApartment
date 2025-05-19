@@ -53,13 +53,44 @@ namespace RentApartments.Domain.Entities
 
         #endregion
 
-        #region Constructor
+        #region Constructors
 
-        protected RentalAgreement()
+        /// <summary>
+        /// Protected constructor for ORM (EF Core).
+        /// </summary>
+        protected RentalAgreement() { }
+
+        /// <summary>
+        /// Public constructor — auto-generates ID.
+        /// </summary>
+        /// <param name="apartment">Apartment being rented.</param>
+        /// <param name="tenant">Tenant involved.</param>
+        /// <param name="landlord">Landlord offering the apartment.</param>
+        /// <param name="monthlyRent">Monthly rent amount.</param>
+        /// <param name="startDate">Start date of the rental.</param>
+        /// <param name="creationDate">Date of agreement creation.</param>
+        public RentalAgreement(
+            Apartment apartment,
+            Tenant tenant,
+            Landlord landlord,
+            Money monthlyRent,
+            DateTime startDate,
+            DateTime creationDate)
+            : this(Guid.NewGuid(), apartment, tenant, landlord, monthlyRent, startDate, creationDate)
         {
         }
 
-        public RentalAgreement(
+        /// <summary>
+        /// Main constructor — includes explicit ID.
+        /// </summary>
+        /// <param name="id">Rental agreement ID.</param>
+        /// <param name="apartment">Apartment being rented.</param>
+        /// <param name="tenant">Tenant involved.</param>
+        /// <param name="landlord">Landlord offering the apartment.</param>
+        /// <param name="monthlyRent">Monthly rent amount.</param>
+        /// <param name="startDate">Start date of the rental.</param>
+        /// <param name="creationDate">Date of agreement creation.</param>
+        protected RentalAgreement(
             Guid id,
             Apartment apartment,
             Tenant tenant,
@@ -81,6 +112,7 @@ namespace RentApartments.Domain.Entities
 
         #region Methods
 
+        // Метод для расторжения договора аренды
         /// <summary>
         /// Terminates the rental agreement.
         /// </summary>
@@ -89,13 +121,14 @@ namespace RentApartments.Domain.Entities
         public void Terminate(DateTime endDate)
         {
             if (!IsActive)
-                throw new InvalidOperationException("The rental agreement is already terminated.");
+                throw new RentalAgreementAlreadyTerminatedException(this);
 
             if (endDate < StartDate)
-                throw new InvalidOperationException("End date cannot be before start date.");
+                throw new RentalAgreementInvalidEndDateException(this, StartDate, endDate);
 
             EndDate = endDate;
         }
+
 
         #endregion
     }
