@@ -10,36 +10,51 @@ namespace RentApartments.Domain.Entities
     /// </summary>
     public class Landlord(Guid id, Username username) : Entity<Guid>(id)
     {
+
+
         #region Fields
 
         /// <summary> 
-        /// The landlord's rental properties (apartments).
+        ///приватная коллекция для хранения всех квартир принадлежащих арендодателю
+        ///ICollection<Apartment> изменяемая коллекция квартир
+        ///инициализируется пустым списком
         /// </summary>
         private readonly ICollection<Apartment> _apartments = [];
 
-        #endregion // Fields
+        #endregion 
 
         #region Properties
 
         /// <summary> 
-        /// Gets the landlord's Username. 
+        ///имя пользователя арендодателя
+        ///Username value object
+     
+        ///проверка при создании выбрасывает ArgumentNullValueException если username null
         /// </summary>
         public Username Username { get; private set; } = username ?? throw new ArgumentNullValueException(nameof(username));
 
         /// <summary>
-        /// Gets the landlord's active rental properties (apartments).
+        /// только для чтения коллекция активных (доступных) квартир арендодателя
+        /// возвращает IReadOnlyCollection<Apartment> неизменяемую коллекцию
+        /// фильтрация только квартиры со статусом ApartmentStatus.Available
+        /// преобразование ToList().AsReadOnly() для безопасного возврата
         /// </summary>
         public IReadOnlyCollection<Apartment> ActiveApartments =>
             _apartments.Where(apartment => apartment.Status == ApartmentStatus.Available).ToList().AsReadOnly();
 
-        #endregion // Properties
+        #endregion 
+
+
 
         #region Methods
 
         /// <summary>
-        /// Adds an apartment to the landlord's list of available apartments for rent.
+        /// добавляет квартиру в список арендодателя
+        /// принимает apartment объект квартиры для добавления
+        /// проверки:
+        /// если квартира уже есть в списке, выбрасывает InvalidOperationException
+        /// действие: добавляет квартиру в коллекцию _apartments
         /// </summary>
-        /// <param name="apartment">The apartment to add.</param>
         public void AddApartment(Apartment apartment)
         {
             if (_apartments.Contains(apartment))
@@ -49,10 +64,16 @@ namespace RentApartments.Domain.Entities
         }
 
         /// <summary>
-        /// Removes an apartment from the landlord's available apartments.
+        /// удаляет квартиру из списка арендодателя
+        /// принимает apartment объект квартиры для удаления
+        /// возвращает: 
+        /// true если квартира найдена и удалена
+        /// false если квартира не найдена
+        /// логика:
+        /// ищет квартиру по Id (не по ссылке)
+        /// если найдена - удаляет и возвращает true
+        /// если не найдена - возвращает false
         /// </summary>
-        /// <param name="apartment">The apartment to remove.</param>
-        /// <returns>True if the apartment was successfully removed; otherwise, false.</returns>
         public bool RemoveApartment(Apartment apartment)
         {
             var apartmentToRemove = _apartments.FirstOrDefault(a => a.Id == apartment.Id);
@@ -63,11 +84,7 @@ namespace RentApartments.Domain.Entities
             return true;
         }
 
-        /// <summary>
-        /// Changes the status of an apartment (e.g., available, unavailable).
-        /// </summary>
-        /// <param name="apartment">The apartment whose status is to be changed.</param>
-        /// <param name="newStatus">The new status for the apartment.</param>
+        /// зачем это
         public void ChangeApartmentStatus(Apartment apartment, ApartmentStatus newStatus)
         {
             var apartmentToUpdate = _apartments.FirstOrDefault(a => a.Id == apartment.Id)
@@ -77,10 +94,14 @@ namespace RentApartments.Domain.Entities
         }
 
         /// <summary>
-        /// Updates the description or details of an apartment.
+        /// обновляет описание квартиры арендодателя
+        /// принимает:
+        /// apartment квартира для обновления
+        /// newDescription новое описание 
+        /// если квартира не принадлежит арендодателю, выбрасывает ApartmentDoesNotExistException
+        /// вызывает метод UpdateDescription у найденной квартиры
+        /// внутри Apartment происходит проверка на null newDescription
         /// </summary>
-        /// <param name="apartment">The apartment to update.</param>
-        /// <param name="newDescription">New description for the apartment.</param>
         public void UpdateApartmentDetails(Apartment apartment, string newDescription)
         {
             var apartmentToUpdate = _apartments.FirstOrDefault(a => a.Id == apartment.Id)

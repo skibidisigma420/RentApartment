@@ -11,22 +11,21 @@ namespace RentApartments.Application.Services
     public class ApartmentsApplicationService(
         IApartmentRepository apartmentRepository,
         ILandlordRepository landlordRepository,
-        IMapper mapper)
-        : IApartmentsApplicationService
+        IMapper mapper) : IApartmentsApplicationService
     {
-        public async Task<ApartmentModel?> GetApartmentByIdAsync(Guid id, CancellationToken cancellationToken)
+        public async Task<ApartmentModel?> GetApartmentByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
             var apartment = await apartmentRepository.GetByIdAsync(id, cancellationToken);
-            return apartment is null ? null : MapToModel(apartment);
+            return apartment is null ? null : mapper.Map<ApartmentModel>(apartment);
         }
 
-        public async Task<IEnumerable<ApartmentModel>> GetAvailableApartmentsAsync(CancellationToken cancellationToken)
+        public async Task<IEnumerable<ApartmentModel>> GetAvailableApartmentsAsync(CancellationToken cancellationToken = default)
         {
             var apartments = await apartmentRepository.GetAvailableApartmentsAsync(cancellationToken);
-            return apartments.Select(MapToModel);
+            return mapper.Map<IEnumerable<ApartmentModel>>(apartments);
         }
 
-        public async Task<ApartmentModel?> CreateApartmentAsync(CreateApartmentModel apartmentInformation, CancellationToken cancellationToken)
+        public async Task<ApartmentModel?> CreateApartmentAsync(CreateApartmentModel apartmentInformation, CancellationToken cancellationToken = default)
         {
             var landlord = await landlordRepository.GetByIdAsync(apartmentInformation.LandlordId, cancellationToken);
             if (landlord is null)
@@ -38,14 +37,13 @@ namespace RentApartments.Application.Services
                 new Description(apartmentInformation.Description),
                 new Address(apartmentInformation.Address),
                 new Money(apartmentInformation.MonthlyRent),
-                landlord
-            );
+                landlord);
 
             var createdApartment = await apartmentRepository.AddAsync(apartment, cancellationToken);
-            return createdApartment is null ? null : MapToModel(createdApartment);
+            return createdApartment is null ? null : mapper.Map<ApartmentModel>(createdApartment);
         }
 
-        public async Task<bool> UpdateApartmentDescriptionAsync(Guid apartmentId, string newDescription, CancellationToken cancellationToken)
+        public async Task<bool> UpdateApartmentDescriptionAsync(Guid apartmentId, string newDescription, CancellationToken cancellationToken = default)
         {
             var apartment = await apartmentRepository.GetByIdAsync(apartmentId, cancellationToken);
             if (apartment is null)
@@ -55,7 +53,7 @@ namespace RentApartments.Application.Services
             return await apartmentRepository.UpdateAsync(apartment, cancellationToken);
         }
 
-        public async Task<bool> ChangeApartmentStatusAsync(Guid apartmentId, ApartmentStatus newStatus, CancellationToken cancellationToken)
+        public async Task<bool> ChangeApartmentStatusAsync(Guid apartmentId, ApartmentStatus newStatus, CancellationToken cancellationToken = default)
         {
             var apartment = await apartmentRepository.GetByIdAsync(apartmentId, cancellationToken);
             if (apartment is null)
@@ -65,27 +63,13 @@ namespace RentApartments.Application.Services
             return await apartmentRepository.UpdateAsync(apartment, cancellationToken);
         }
 
-        public async Task<bool> DeleteApartmentAsync(Guid id, CancellationToken cancellationToken)
+        public async Task<bool> DeleteApartmentAsync(Guid id, CancellationToken cancellationToken = default)
         {
             var apartment = await apartmentRepository.GetByIdAsync(id, cancellationToken);
             if (apartment is null)
                 return false;
 
             return await apartmentRepository.DeleteAsync(apartment, cancellationToken);
-        }
-
-        // Маппинг вручную — можно заменить AutoMapper'ом при необходимости
-        private static ApartmentModel MapToModel(Apartment apartment)
-        {
-            return new ApartmentModel(
-                apartment.Id,
-                apartment.Title.Value,
-                apartment.Description.Value,
-                apartment.Address.Value,
-                apartment.MonthlyRent.Value,
-                apartment.Landlord.Id,
-                apartment.IsAvailable
-            );
         }
     }
 }

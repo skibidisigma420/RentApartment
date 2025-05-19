@@ -2,13 +2,17 @@
 using RentApartments.Application.Models.RentRequest;
 using RentApartments.Application.Services.Abstractions;
 using RentApartments.Domain.Entities;
-using RentApartments.Domain.Repositories;
 using RentApartments.Domain.Repositories.Abstractions;
+using RentApartments.Domain.Enums;
 
 namespace RentApartments.Application.Services
 {
-    public class RentRequestsApplicationService(IRentRequestRepository rentRequestRepository, IApartmentRepository apartmentRepository, ITenantRepository tenantRepository, ILandlordRepository landlordRepository, IMapper mapper)
-    : IRentRequestsApplicationService
+    public class RentRequestsApplicationService(
+        IRentRequestRepository rentRequestRepository,
+        IApartmentRepository apartmentRepository,
+        ITenantRepository tenantRepository,
+        ILandlordRepository landlordRepository,
+        IMapper mapper) : IRentRequestsApplicationService
     {
         public async Task<IEnumerable<RentRequestModel>> GetRequestsByApartmentIdAsync(Guid apartmentId, CancellationToken cancellationToken = default)
         {
@@ -27,10 +31,10 @@ namespace RentApartments.Application.Services
 
             var rentRequest = new RentRequest(apartment, tenant, landlord, requestInformation.Message);
 
-            await rentRequestRepository.AddAsync(rentRequest, cancellationToken);
-            await rentRequestRepository.SaveChangesAsync(cancellationToken); // Сохраняем изменения
+            var addedRequest = await rentRequestRepository.AddAsync(rentRequest, cancellationToken);
+            await rentRequestRepository.SaveChangesAsync(cancellationToken);
 
-            return mapper.Map<RentRequestModel>(rentRequest);
+            return addedRequest is null ? null : mapper.Map<RentRequestModel>(addedRequest);
         }
 
         public async Task<bool> ApproveRequestAsync(Guid requestId, CancellationToken cancellationToken = default)
@@ -40,8 +44,7 @@ namespace RentApartments.Application.Services
                 return false;
 
             rentRequest.Approve();
-            await rentRequestRepository.SaveChangesAsync(cancellationToken); // Сохраняем изменения
-
+            await rentRequestRepository.SaveChangesAsync(cancellationToken);
             return true;
         }
 
@@ -52,10 +55,8 @@ namespace RentApartments.Application.Services
                 return false;
 
             rentRequest.Reject();
-            await rentRequestRepository.SaveChangesAsync(cancellationToken); // Сохраняем изменения
-
+            await rentRequestRepository.SaveChangesAsync(cancellationToken);
             return true;
         }
     }
-
 }
