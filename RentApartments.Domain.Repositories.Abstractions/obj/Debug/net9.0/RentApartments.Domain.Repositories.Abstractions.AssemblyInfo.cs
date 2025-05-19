@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RentApartments.Domain.Repositories.Abstractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fbd79a77b24f66a386ff86ec6e1c44a56fa31f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80ff1e68e0a9dfd61e106df16fe3cab53dff3121")]
 [assembly: System.Reflection.AssemblyProductAttribute("RentApartments.Domain.Repositories.Abstractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RentApartments.Domain.Repositories.Abstractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
