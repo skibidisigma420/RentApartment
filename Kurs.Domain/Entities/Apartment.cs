@@ -128,9 +128,9 @@ namespace RentApartments.Domain.Entities
             return (Status, newStatus) switch
             {
                 (ApartmentStatus.Available, ApartmentStatus.Rented) => _rentRequests.Any(r => r.Status == RentRequestStatus.Approved),
-                (ApartmentStatus.Rented, ApartmentStatus.Available) => false, // запрещаем напрямую
+                (ApartmentStatus.Rented, ApartmentStatus.Available) => false, 
                 (ApartmentStatus.Unavailable, ApartmentStatus.Available) => true,
-                (_, _) => true // разрешаем остальные
+                (_, _) => true 
             };
         }
 
@@ -139,7 +139,7 @@ namespace RentApartments.Domain.Entities
             if (string.IsNullOrWhiteSpace(newDescription))
                 throw new ArgumentException("Description cannot be empty or whitespace.", nameof(newDescription));
 
-            Description = new Description(newDescription); // или Description.Create(newDescription);
+            Description = new Description(newDescription); 
         }
 
 

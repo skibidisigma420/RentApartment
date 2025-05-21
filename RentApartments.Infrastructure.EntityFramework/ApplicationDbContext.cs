@@ -3,11 +3,8 @@ using RentApartments.Domain.Entities;
 
 namespace RentApartments.Infrastructure.EntityFramework
 {
-    public class ApplicationDbContext : DbContext
-    {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-        {
-        }
+    public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
+    {     
 
         public DbSet<Apartment> Apartments { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
@@ -24,7 +21,6 @@ namespace RentApartments.Infrastructure.EntityFramework
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
-            base.OnModelCreating(modelBuilder);
         }
     }
 }

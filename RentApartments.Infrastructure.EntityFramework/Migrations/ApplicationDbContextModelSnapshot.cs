@@ -2,6 +2,9 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+using RentApartments.Infrastructure.EntityFramework;
 
 #nullable disable
 
@@ -14,210 +17,251 @@ namespace RentApartments.Infrastructure.EntityFramework.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("ProductVersion", "9.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            // Apartment entity
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
             modelBuilder.Entity("RentApartments.Domain.Entities.Apartment", b =>
-            {
-                b.Property<Guid>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("uuid");
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
 
-                b.Property<string>("Address")
-                    .IsRequired()
-                    .HasMaxLength(200)
-                    .HasColumnType("character varying(200)");
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                b.Property<int>("Status")
-                    .HasColumnType("integer");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                b.Property<Guid>("LandlordId")
-                    .HasColumnType("uuid");
+                    b.Property<Guid>("LandlordId")
+                        .HasColumnType("uuid");
 
-                b.HasKey("Id");
+                    b.Property<decimal>("MonthlyRent")
+                        .HasColumnType("numeric");
 
-                b.HasIndex("LandlordId");
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
 
-                b.ToTable("Apartments");
-            });
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
-            // Tenant entity
-            modelBuilder.Entity("RentApartments.Domain.Entities.Tenant", b =>
-            {
-                b.Property<Guid>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("uuid");
+                    b.HasKey("Id");
 
-                b.Property<string>("Name")
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .HasColumnType("character varying(100)");
+                    b.HasIndex("LandlordId");
 
-                b.HasKey("Id");
+                    b.ToTable("Apartments");
+                });
 
-                b.ToTable("Tenants");
-            });
-
-            // Landlord entity
             modelBuilder.Entity("RentApartments.Domain.Entities.Landlord", b =>
-            {
-                b.Property<Guid>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("uuid");
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
 
-                b.Property<string>("Name")
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .HasColumnType("character varying(100)");
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.ToTable("Landlords");
-            });
+                    b.ToTable("Landlords");
+                });
 
-            // RentalAgreement entity
-            modelBuilder.Entity("RentApartments.Domain.Entities.RentalAgreement", b =>
-            {
-                b.Property<Guid>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("uuid");
-
-                b.Property<DateTime>("CreationDate")
-                    .HasColumnType("timestamp with time zone");
-
-                b.Property<DateTime>("StartDate")
-                    .HasColumnType("timestamp with time zone");
-
-                b.Property<DateTime?>("EndDate")
-                    .HasColumnType("timestamp with time zone");
-
-                b.Property<Guid>("ApartmentId")
-                    .HasColumnType("uuid");
-
-                b.Property<Guid>("TenantId")
-                    .HasColumnType("uuid");
-
-                b.Property<Guid>("LandlordId")
-                    .HasColumnType("uuid");
-
-                // Представим, что Money реализован как Value Object с Amount и Currency
-                b.Property<decimal>("MonthlyRent_Amount")
-                    .HasColumnType("numeric");
-
-                b.Property<string>("MonthlyRent_Currency")
-                    .IsRequired()
-                    .HasMaxLength(3)
-                    .HasColumnType("character varying(3)");
-
-                b.HasKey("Id");
-
-                b.HasIndex("ApartmentId");
-
-                b.HasIndex("TenantId");
-
-                b.HasIndex("LandlordId");
-
-                b.ToTable("RentalAgreements");
-            });
-
-            // RentRequest entity
             modelBuilder.Entity("RentApartments.Domain.Entities.RentRequest", b =>
-            {
-                b.Property<Guid>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("uuid");
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
 
-                b.Property<DateTime>("RequestDate")
-                    .HasColumnType("timestamp with time zone");
+                    b.Property<Guid>("ApartmentId")
+                        .HasColumnType("uuid");
 
-                b.Property<int>("Status")
-                    .HasColumnType("integer");
+                    b.Property<Guid>("LandlordId")
+                        .HasColumnType("uuid");
 
-                b.Property<string>("Message")
-                    .HasColumnType("text");
+                    b.Property<string>("Message")
+                        .HasMaxLength(1000)
+                        .HasColumnType("character varying(1000)");
 
-                b.Property<Guid>("ApartmentId")
-                    .HasColumnType("uuid");
+                    b.Property<DateTime>("RequestDate")
+                        .HasColumnType("timestamp with time zone");
 
-                b.Property<Guid>("TenantId")
-                    .HasColumnType("uuid");
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
 
-                b.Property<Guid>("LandlordId")
-                    .HasColumnType("uuid");
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uuid");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.HasIndex("ApartmentId");
+                    b.HasIndex("ApartmentId");
 
-                b.HasIndex("TenantId");
+                    b.HasIndex("LandlordId");
 
-                b.HasIndex("LandlordId");
+                    b.HasIndex("TenantId");
 
-                b.ToTable("RentRequests");
-            });
+                    b.ToTable("RentRequests");
+                });
 
-            // Навигационные связи
+            modelBuilder.Entity("RentApartments.Domain.Entities.RentalAgreement", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ApartmentId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("LandlordId")
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("MonthlyRent")
+                        .HasColumnType("numeric");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApartmentId");
+
+                    b.HasIndex("LandlordId");
+
+                    b.HasIndex("TenantId");
+
+                    b.ToTable("RentalAgreements");
+                });
+
+            modelBuilder.Entity("RentApartments.Domain.Entities.Tenant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tenants");
+                });
+
+            modelBuilder.Entity("TenantObservableApartments", b =>
+                {
+                    b.Property<Guid>("ApartmentId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("ApartmentId", "TenantId");
+
+                    b.HasIndex("TenantId");
+
+                    b.ToTable("TenantObservableApartments");
+                });
+
             modelBuilder.Entity("RentApartments.Domain.Entities.Apartment", b =>
-            {
-                b.HasOne("RentApartments.Domain.Entities.Landlord", "Landlord")
-                    .WithMany("ActiveApartments")
-                    .HasForeignKey("LandlordId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+                {
+                    b.HasOne("RentApartments.Domain.Entities.Landlord", "Landlord")
+                        .WithMany("_apartments")
+                        .HasForeignKey("LandlordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                b.Navigation("Landlord");
-            });
-
-            modelBuilder.Entity("RentApartments.Domain.Entities.RentalAgreement", b =>
-            {
-                b.HasOne("RentApartments.Domain.Entities.Apartment", "Apartment")
-                    .WithMany()
-                    .HasForeignKey("ApartmentId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
-
-                b.HasOne("RentApartments.Domain.Entities.Tenant", "Tenant")
-                    .WithMany()
-                    .HasForeignKey("TenantId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
-
-                b.HasOne("RentApartments.Domain.Entities.Landlord", "Landlord")
-                    .WithMany()
-                    .HasForeignKey("LandlordId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
-
-                b.Navigation("Apartment");
-                b.Navigation("Tenant");
-                b.Navigation("Landlord");
-            });
+                    b.Navigation("Landlord");
+                });
 
             modelBuilder.Entity("RentApartments.Domain.Entities.RentRequest", b =>
-            {
-                b.HasOne("RentApartments.Domain.Entities.Apartment", "Apartment")
-                    .WithMany()
-                    .HasForeignKey("ApartmentId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+                {
+                    b.HasOne("RentApartments.Domain.Entities.Apartment", "Apartment")
+                        .WithMany()
+                        .HasForeignKey("ApartmentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                b.HasOne("RentApartments.Domain.Entities.Tenant", "Tenant")
-                    .WithMany()
-                    .HasForeignKey("TenantId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+                    b.HasOne("RentApartments.Domain.Entities.Landlord", "Landlord")
+                        .WithMany()
+                        .HasForeignKey("LandlordId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                b.HasOne("RentApartments.Domain.Entities.Landlord", "Landlord")
-                    .WithMany()
-                    .HasForeignKey("LandlordId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+                    b.HasOne("RentApartments.Domain.Entities.Tenant", "Tenant")
+                        .WithMany()
+                        .HasForeignKey("TenantId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                b.Navigation("Apartment");
-                b.Navigation("Tenant");
-                b.Navigation("Landlord");
-            });
+                    b.Navigation("Apartment");
+
+                    b.Navigation("Landlord");
+
+                    b.Navigation("Tenant");
+                });
+
+            modelBuilder.Entity("RentApartments.Domain.Entities.RentalAgreement", b =>
+                {
+                    b.HasOne("RentApartments.Domain.Entities.Apartment", "Apartment")
+                        .WithMany()
+                        .HasForeignKey("ApartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RentApartments.Domain.Entities.Landlord", "Landlord")
+                        .WithMany()
+                        .HasForeignKey("LandlordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RentApartments.Domain.Entities.Tenant", "Tenant")
+                        .WithMany()
+                        .HasForeignKey("TenantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Apartment");
+
+                    b.Navigation("Landlord");
+
+                    b.Navigation("Tenant");
+                });
+
+            modelBuilder.Entity("TenantObservableApartments", b =>
+                {
+                    b.HasOne("RentApartments.Domain.Entities.Apartment", null)
+                        .WithMany()
+                        .HasForeignKey("ApartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RentApartments.Domain.Entities.Tenant", null)
+                        .WithMany()
+                        .HasForeignKey("TenantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("RentApartments.Domain.Entities.Landlord", b =>
+                {
+                    b.Navigation("_apartments");
+                });
 #pragma warning restore 612, 618
         }
     }

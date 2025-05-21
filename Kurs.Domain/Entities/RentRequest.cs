@@ -13,29 +13,28 @@ namespace RentApartments.Domain.Entities
     {
         #region Properties
 
-        // Квартира, на которую подается запрос (только для чтения)
+        // Квартира, на которую подается запрос 
         public Apartment Apartment { get; }
 
-        // Арендатор, подающий запрос (только для чтения)
+        // Арендатор, подающий запрос 
         public Tenant Tenant { get; }
 
-        // Арендодатель, который рассматривает запрос (только для чтения)
+        // Арендодатель, который рассматривает запрос 
         public Landlord Landlord { get; }
 
-        // Дата и время подачи запроса (только для чтения)
+        // Дата и время подачи запроса
         public DateTime RequestDate { get; }
 
         // Текущий статус запроса 
         public RentRequestStatus Status { get; private set; }
 
-        // Дополнительное сообщение к запросу (необязательное поле)
+        
         public string? Message { get; }
 
         #endregion
 
         #region Constructors
 
-        // Защищённый конструктор без параметров (для EF Core)
         protected RentRequest() { }
 
         /// <summary>

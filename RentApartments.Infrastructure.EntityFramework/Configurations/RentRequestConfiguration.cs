@@ -14,7 +14,7 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
 
             builder.Property(x => x.Id).IsRequired();
 
-            // Конвертация связанных сущностей через их Id (т.к. Apartment, Tenant, Landlord — сложные объекты)
+           
             builder.Property<Guid>("ApartmentId").IsRequired();
             builder.HasOne(x => x.Apartment)
                 .WithMany()
@@ -38,7 +38,7 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
 
             builder.Property(x => x.Status)
                 .IsRequired()
-                .HasConversion<int>(); // Enum в int
+                .HasConversion<int>(); 
 
             builder.Property(x => x.Message)
                 .HasMaxLength(1000)
