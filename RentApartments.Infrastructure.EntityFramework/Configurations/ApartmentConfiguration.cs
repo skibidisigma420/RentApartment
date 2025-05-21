@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RentApartments.Domain.Entities;
 using RentApartments.Domain.ValueObjects;
+using RentApartments.Domain.ValueObjects.Validators; 
 using RentApartments.Domain.Enums;
 
 namespace RentApartments.Infrastructure.EntityFramework.Configurations
@@ -11,12 +12,11 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
         public void Configure(EntityTypeBuilder<Apartment> builder)
         {
             builder.HasKey(x => x.Id);
-
             builder.Property(x => x.Id).IsRequired();
-
             builder.Property(x => x.Title)
                 .IsRequired()
-                .HasConversion(title => title.Value, str => new Title(str));
+                .HasConversion(title => title.Value, str => new Title(str))
+                .HasMaxLength(TitleValidator.MAX_LENGTH);
 
             builder.Property(x => x.Description)
                 .IsRequired()
@@ -24,7 +24,7 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
 
             builder.Property(x => x.Address)
                 .IsRequired()
-                .HasConversion(address => address.Value, str => new Address(str));
+                .HasConversion(addr => addr.Value, str => new Address(str));
 
             builder.Property(x => x.MonthlyRent)
                 .IsRequired()
@@ -32,17 +32,13 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
 
             builder.Property(x => x.Status)
                 .IsRequired()
-                .HasConversion<int>();
+                .HasConversion<int>(); 
 
-            builder.HasOne(x => x.Landlord)
-                .WithMany(x => x.ActiveApartments) 
+            builder.HasOne(x => x.Landlord).WithMany()
                 .IsRequired();
 
-            builder.HasMany<RentRequest>("_rentRequests")
-                .WithOne(x => x.Apartment)
-                .OnDelete(DeleteBehavior.Cascade); 
+            builder.HasMany<RentRequest>("_rentRequests").WithOne(x => x.Apartment).OnDelete(DeleteBehavior.Cascade);
 
-            // Игнорируем вычисляемые свойства
             builder.Ignore(x => x.LastRequest);
             builder.Ignore(x => x.IsAvailable);
         }

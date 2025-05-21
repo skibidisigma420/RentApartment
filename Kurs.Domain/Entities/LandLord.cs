@@ -39,8 +39,8 @@ namespace RentApartments.Domain.Entities
         /// фильтрация только квартиры со статусом ApartmentStatus.Available
         /// преобразование ToList().AsReadOnly() для безопасного возврата
         /// </summary>
-        public IReadOnlyCollection<Apartment> ActiveApartments =>
-            _apartments.Where(apartment => apartment.Status == ApartmentStatus.Available).ToList().AsReadOnly();
+        public IReadOnlyCollection<Apartment> ActiveApartments => _apartments
+        .Where(a => a.Status == ApartmentStatus.Available).ToList();
 
         #endregion 
 

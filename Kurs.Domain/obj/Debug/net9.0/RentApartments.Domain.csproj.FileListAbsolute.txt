@@ -1,4 +1,5 @@
 D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.deps.json
+D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.runtimeconfig.json
 D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.dll
 D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.pdb
 D:\7878\qwerty\Kurs.Domain\bin\Debug\net9.0\RentApartments.Domain.ValueObjects.dll
@@ -13,4 +14,5 @@ D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApar.84891EB3.Up2Date
 D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.dll
 D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\refint\RentApartments.Domain.dll
 D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.pdb
+D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\RentApartments.Domain.genruntimeconfig.cache
 D:\7878\qwerty\Kurs.Domain\obj\Debug\net9.0\ref\RentApartments.Domain.dll

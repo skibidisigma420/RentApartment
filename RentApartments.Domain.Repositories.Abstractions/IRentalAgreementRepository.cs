@@ -3,7 +3,7 @@ using RentApartments.Domain.Entities;
 
 public interface IRentalAgreementRepository : IRepository<RentalAgreement, Guid>
 {
-    // Переименовываем методы, чтобы избежать скрытия
+   
     Task<RentalAgreement?> GetRentalAgreementByIdAsync(Guid id, CancellationToken cancellationToken);
     Task<RentalAgreement?> AddRentalAgreementAsync(RentalAgreement agreement, CancellationToken cancellationToken);
     Task UpdateRentalAgreementAsync(RentalAgreement agreement, CancellationToken cancellationToken);

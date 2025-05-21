@@ -13,7 +13,7 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
 
             builder.Property(x => x.Id).IsRequired();
 
-            // Конвертация для Money (MonthlyRent)
+           
             builder.Property(x => x.MonthlyRent)
                 .IsRequired()
                 .HasConversion(
@@ -21,7 +21,7 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
                     value => new Money(value)
                 );
 
-            // Даты с указанием UTC
+           
             builder.Property(x => x.CreationDate)
                 .IsRequired()
                 .HasConversion(
@@ -46,21 +46,19 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
                         ? (dst.Value.Kind == DateTimeKind.Utc ? dst.Value : DateTime.SpecifyKind(dst.Value, DateTimeKind.Utc))
                         : (DateTime?)null
                 );
-
-            // Навигационные свойства
+           
             builder.HasOne(x => x.Apartment)
-                .WithMany() // если нет обратной навигации, иначе укажи
+                .WithMany() 
                 .IsRequired();
 
             builder.HasOne(x => x.Tenant)
-                .WithMany() // если нет обратной навигации, иначе укажи
+                .WithMany() 
                 .IsRequired();
 
             builder.HasOne(x => x.Landlord)
-                .WithMany() // если нет обратной навигации, иначе укажи
+                .WithMany() 
                 .IsRequired();
 
-            // Игнорируем вычисляемые свойства
             builder.Ignore(x => x.IsActive);
         }
     }

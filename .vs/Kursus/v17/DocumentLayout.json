@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "D:\\7878\\qwerty\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|solutionrelative:rentapartments.infrastructure.entityframework\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\7878\\qwerty\\ConsoleApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ConsoleApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\rentapartments.infrastructure.entityframework.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|solutionrelative:rentapartments.infrastructure.entityframework\\rentapartments.infrastructure.entityframework.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\migrations\\20241029135717_tenantobservablerentapartments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|solutionrelative:rentapartments.infrastructure.entityframework\\migrations\\20241029135717_tenantobservablerentapartments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\migrations\\20241014100948_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|solutionrelative:rentapartments.infrastructure.entityframework\\migrations\\20241014100948_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|solutionrelative:rentapartments.infrastructure.entityframework\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|d:\\7878\\qwerty\\kurs.domain\\rentapartments.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|solutionrelative:kurs.domain\\rentapartments.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|solutionrelative:rentapartments.infrastructure.entityframework\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|solutionrelative:rentapartments.infrastructure.entityframework\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\configurations\\tenantconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,6 +33,34 @@
     {
       "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\configurations\\apartmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|solutionrelative:rentapartments.infrastructure.entityframework\\configurations\\apartmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4CEB6D-2BC3-4238-BB98-C16128EEA190}|RentApartments.Domain.Repositories.Abstractions\\RentApartments.Domain.Repositories.Abstractions.csproj|d:\\7878\\qwerty\\rentapartments.domain.repositories.abstractions\\irentalagreementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D4CEB6D-2BC3-4238-BB98-C16128EEA190}|RentApartments.Domain.Repositories.Abstractions\\RentApartments.Domain.Repositories.Abstractions.csproj|solutionrelative:rentapartments.domain.repositories.abstractions\\irentalagreementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|d:\\7878\\qwerty\\kurs.domain\\entities\\rentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|solutionrelative:kurs.domain\\entities\\rentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|d:\\7878\\qwerty\\kurs.domain\\entities\\landlord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|solutionrelative:kurs.domain\\entities\\landlord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|d:\\7878\\qwerty\\kurs.domain\\entities\\apartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|solutionrelative:kurs.domain\\entities\\apartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B17EC79-0319-4780-A336-58EB313B95F1}|RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj|d:\\7878\\qwerty\\rentapartments.domain.valueobj\\rentapartments.domain.valueobjects.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3B17EC79-0319-4780-A336-58EB313B95F1}|RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj|solutionrelative:rentapartments.domain.valueobj\\rentapartments.domain.valueobjects.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|d:\\7878\\qwerty\\kurs.domain\\rentapartments.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|solutionrelative:kurs.domain\\rentapartments.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\7878\\qwerty\\ConsoleApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ConsoleApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,103 +90,171 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\7878\\qwerty\\ConsoleApp1\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
-              "ToolTip": "D:\\7878\\qwerty\\ConsoleApp1\\Program.cs",
-              "RelativeToolTip": "ConsoleApp1\\Program.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T17:03:59.637Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T16:47:37.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20241014100948_Initial.cs",
-              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\20241014100948_Initial.cs",
-              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Migrations\\20241014100948_Initial.cs",
-              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\20241014100948_Initial.cs",
-              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Migrations\\20241014100948_Initial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T16:42:15.936Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "20241029135717_TenantObservableRentApartments.cs",
-              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\20241029135717_TenantObservableRentApartments.cs",
-              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Migrations\\20241029135717_TenantObservableRentApartments.cs",
-              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\20241029135717_TenantObservableRentApartments.cs",
-              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Migrations\\20241029135717_TenantObservableRentApartments.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T16:44:36.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RentApartments.Infrastructure.EntityFramework.csproj",
-              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj",
-              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj",
-              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj",
-              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-19T16:05:44.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\ApplicationDbContext.cs",
-              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T15:41:57.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "TenantConfiguration.cs",
               "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\TenantConfiguration.cs",
               "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Configurations\\TenantConfiguration.cs",
               "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\TenantConfiguration.cs",
               "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Configurations\\TenantConfiguration.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBgAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T15:46:49.593Z"
+              "WhenOpened": "2025-05-19T15:46:49.593Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\ApplicationDbContext.cs",
+              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T15:41:57.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\ApplicationDbContextFactory.cs",
+              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwAwAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T11:44:59.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\appsettings.Development.json",
+              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\appsettings.Development.json",
+              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-21T10:49:06.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RentRequestConfiguration.cs",
               "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\RentRequestConfiguration.cs",
               "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Configurations\\RentRequestConfiguration.cs",
               "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\RentRequestConfiguration.cs",
               "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Configurations\\RentRequestConfiguration.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T15:46:07.291Z"
+              "WhenOpened": "2025-05-19T15:46:07.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RentalAgreementConfiguration.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\RentalAgreementConfiguration.cs",
+              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Configurations\\RentalAgreementConfiguration.cs",
+              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\RentalAgreementConfiguration.cs",
+              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Configurations\\RentalAgreementConfiguration.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T15:45:21.516Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "LandlordConfiguration.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\LandlordConfiguration.cs",
+              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Configurations\\LandlordConfiguration.cs",
+              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\LandlordConfiguration.cs",
+              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Configurations\\LandlordConfiguration.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwB0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T15:45:03.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApartmentConfiguration.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\ApartmentConfiguration.cs",
+              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Configurations\\ApartmentConfiguration.cs",
+              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\ApartmentConfiguration.cs",
+              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Configurations\\ApartmentConfiguration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T15:43:32.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IRentalAgreementRepository.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Domain.Repositories.Abstractions\\IRentalAgreementRepository.cs",
+              "RelativeDocumentMoniker": "RentApartments.Domain.Repositories.Abstractions\\IRentalAgreementRepository.cs",
+              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Domain.Repositories.Abstractions\\IRentalAgreementRepository.cs",
+              "RelativeToolTip": "RentApartments.Domain.Repositories.Abstractions\\IRentalAgreementRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T12:53:24.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RentRequest.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\RentRequest.cs",
+              "RelativeDocumentMoniker": "Kurs.Domain\\Entities\\RentRequest.cs",
+              "ToolTip": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\RentRequest.cs",
+              "RelativeToolTip": "Kurs.Domain\\Entities\\RentRequest.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAIwA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T12:51:42.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Apartment.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\Apartment.cs",
+              "RelativeDocumentMoniker": "Kurs.Domain\\Entities\\Apartment.cs",
+              "ToolTip": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\Apartment.cs",
+              "RelativeToolTip": "Kurs.Domain\\Entities\\Apartment.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAswI0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T12:49:43.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LandLord.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\LandLord.cs",
+              "RelativeDocumentMoniker": "Kurs.Domain\\Entities\\LandLord.cs",
+              "ToolTip": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\LandLord.cs",
+              "RelativeToolTip": "Kurs.Domain\\Entities\\LandLord.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCoAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T11:58:23.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "RentApartments.Domain.csproj",
               "DocumentMoniker": "D:\\7878\\qwerty\\Kurs.Domain\\RentApartments.Domain.csproj",
               "RelativeDocumentMoniker": "Kurs.Domain\\RentApartments.Domain.csproj",
@@ -186,39 +266,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RentalAgreementConfiguration.cs",
-              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\RentalAgreementConfiguration.cs",
-              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Configurations\\RentalAgreementConfiguration.cs",
-              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\RentalAgreementConfiguration.cs",
-              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Configurations\\RentalAgreementConfiguration.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T15:45:21.516Z"
+              "DocumentIndex": 12,
+              "Title": "RentApartments.Domain.ValueObjects.csproj",
+              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj",
+              "RelativeDocumentMoniker": "RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj",
+              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj",
+              "RelativeToolTip": "RentApartments.Domain.ValueObj\\RentApartments.Domain.ValueObjects.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-21T10:26:01.847Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LandlordConfiguration.cs",
-              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\LandlordConfiguration.cs",
-              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Configurations\\LandlordConfiguration.cs",
-              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\LandlordConfiguration.cs",
-              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Configurations\\LandlordConfiguration.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "D:\\7878\\qwerty\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T15:45:03.657Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ApartmentConfiguration.cs",
-              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\ApartmentConfiguration.cs",
-              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Configurations\\ApartmentConfiguration.cs",
-              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Configurations\\ApartmentConfiguration.cs",
-              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Configurations\\ApartmentConfiguration.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCoAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T15:43:32.539Z"
+              "WhenOpened": "2025-05-19T17:03:59.637Z"
             }
           ]
         },

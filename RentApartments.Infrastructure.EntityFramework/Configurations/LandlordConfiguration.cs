@@ -27,8 +27,8 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Игнорируем вычисляемые свойства
-            builder.Ignore(x => x.ActiveApartments);
+            builder.Ignore(x => x.ActiveApartments); 
         }
     }
+
 }

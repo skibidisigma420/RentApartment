@@ -22,10 +22,14 @@ namespace RentApartments.Infrastructure.EntityFramework.Configurations
                 )
                 .HasMaxLength(UsernameValidator.MAX_LENGTH);
 
-            // Конфигурация связи "многие ко многим" (или "многие ко многим" с навигацией)
+           
             builder.HasMany<Apartment>("_observableApartments")
                 .WithMany()
-                .UsingEntity(j => j.ToTable("TenantObservableApartments"));
+                .UsingEntity<Dictionary<string, object>>(
+                    "TenantObservableApartments",
+                    j => j.HasOne<Apartment>().WithMany().HasForeignKey("ApartmentId"),
+                    j => j.HasOne<Tenant>().WithMany().HasForeignKey("TenantId")
+                );
 
             builder.Ignore(x => x.ObservableApartments);
         }
