@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RentApartments.Infrastructure.EntityFramework")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+706dcb39c57742bc592fbb00b6a8c040dbe588e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35cf65e0e4d357ef9d9fa15bf500308782ca2d94")]
 [assembly: System.Reflection.AssemblyProductAttribute("RentApartments.Infrastructure.EntityFramework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RentApartments.Infrastructure.EntityFramework")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

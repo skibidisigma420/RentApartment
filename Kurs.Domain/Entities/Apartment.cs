@@ -70,7 +70,7 @@ namespace RentApartments.Domain.Entities
             Address address,
             Money monthlyRent,
             Landlord landlord
-        ) : this(id, title, description, address, monthlyRent, landlord, ApartmentStatus.Available)
+        ) : this(Guid.NewGuid(), title, description, address, monthlyRent, landlord, ApartmentStatus.Available)
         {
         }
 

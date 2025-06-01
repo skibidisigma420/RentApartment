@@ -16,8 +16,9 @@
   </ItemGroup>
 
 	<ItemGroup>
-		
-		<ProjectReference Include="D:\7878\qwerty\RentApartments.Domain.ValueObj\RentApartments.Domain.ValueObjects.csproj" />
+
+		<ProjectReference Include="..\RentApartments.Domain.ValueObj\RentApartments.Domain.ValueObjects.csproj" />
+
 	</ItemGroup>
 	
 </Project>
