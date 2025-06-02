@@ -57,7 +57,7 @@ namespace RentApartments.Domain.Entities
         /// </summary>
         public void AddApartment(Apartment apartment)
         {
-            if (_apartments.Contains(apartment))
+            if (_apartments.Any(a => a.Id == apartment.Id))
                 throw new InvalidOperationException("This apartment is already listed.");
 
             _apartments.Add(apartment);
@@ -82,15 +82,6 @@ namespace RentApartments.Domain.Entities
 
             _apartments.Remove(apartmentToRemove);
             return true;
-        }
-
-        /// зачем это
-        public void ChangeApartmentStatus(Apartment apartment, ApartmentStatus newStatus)
-        {
-            var apartmentToUpdate = _apartments.FirstOrDefault(a => a.Id == apartment.Id)
-                ?? throw new ApartmentDoesNotExistException(apartment);
-
-            apartmentToUpdate.ChangeStatus(newStatus);
         }
 
         /// <summary>

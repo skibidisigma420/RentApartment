@@ -8,7 +8,6 @@ namespace RentApartments.ConsoleTester
     {
         static void Main(string[] args)
         {
-            
             try
             {
                 TestValueObjects();
@@ -18,26 +17,26 @@ namespace RentApartments.ConsoleTester
                 TestRentRequest();
                 TestRentalAgreement();
 
-                Console.WriteLine("\nпопыт прошел успешно.");
+                Console.WriteLine("\nвсе тесты пройдены успешно.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\nошибка тестирования: {ex}");
+                Console.WriteLine($"\nошибка при тестировании: {ex}");
             }
         }
 
         #region Test Data Helpers
 
-        static Title CreateTestTitle() => new Title("квартира 2 квадратных метра в центре москвы");
-        static Description CreateTestDescription() => new Description("из развлечений есть микроволновка");
-        static Address CreateTestAddress() => new Address("самара, ул. Московская, д. 1");
-        static Money CreateTestMoney(decimal value = 1000) => new Money(value);
+        static Title CreateTestTitle() => new Title("КВАРТИРА В МОСКВЕ");
+        static Description CreateTestDescription() => new Description("2 квадратных метра В ЦЕНТРЕ МОСКВЫ");
+        static Address CreateTestAddress() => new Address("г. Самара, ул. Московская, д. 123");
+        static Money CreateTestMoney(decimal value = 30000) => new Money(value);
         static Username CreateTestUsername() => new Username("bot123");
         #endregion
 
         static void TestValueObjects()
         {
-            Console.WriteLine("\nтест value objects.......");
+            Console.WriteLine("\nтестируем Value Objects......");
 
             var title = CreateTestTitle();
             var description = CreateTestDescription();
@@ -45,25 +44,36 @@ namespace RentApartments.ConsoleTester
             var money = CreateTestMoney();
             var username = CreateTestUsername();
 
-            Console.WriteLine($" - title: {title.Value}");
-            Console.WriteLine($" - description: {description.Value}");
-            Console.WriteLine($" - address: {address.Value}");
-            Console.WriteLine($" - money: {money.Value} р.");
-            Console.WriteLine($" - username: {username.Value}");
+            Console.WriteLine($" - Title: {title.Value}");
+            Console.WriteLine($" - Description: {description.Value}");
+            Console.WriteLine($" - Address: {address.Value}");
+            Console.WriteLine($" - Money: {money.Value} р.");
+            Console.WriteLine($" - Username: {username.Value}");
 
-            Console.WriteLine("обекты созданы");
+            // тестирование валидации
+            try
+            {
+                var invalidMoney = new Money(-100);
+                throw new Exception("money с отрицательным значением не должен был быть создан");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($" - проверка money с отрицательным значением: {ex.Message}");
+            }
+
+            Console.WriteLine("Value Objects протестированы успешно");
         }
-
 
         static void TestLandlord()
         {
-            Console.WriteLine("\nтестим landlord.......");
+            Console.WriteLine("\nтестируем Landlord......");
 
             var landlordId = Guid.NewGuid();
             var landlord = new Landlord(landlordId, CreateTestUsername());
 
-            Console.WriteLine($"созданный landlord: ID = {landlord.Id}, username = {landlord.Username.Value}");
+            Console.WriteLine($"создан Landlord: ID = {landlord.Id}, Username = {landlord.Username.Value}");
 
+            // тестирование добавления квартиры
             var apartment = new Apartment(
                 Guid.NewGuid(),
                 CreateTestTitle(),
@@ -74,21 +84,29 @@ namespace RentApartments.ConsoleTester
             );
 
             landlord.AddApartment(apartment);
-            Console.WriteLine($"(addApartment) добавленная квартира: title = {apartment.Title.Value}, address = {apartment.Address.Value}");
+            Console.WriteLine($"(AddApartment) добавлена квартира: Title = {apartment.Title.Value}, Address = {apartment.Address.Value}");
 
             if (landlord.ActiveApartments.Count != 1)
-                throw new Exception("квартира не добавлена");
+                throw new Exception("квартира не была добавлена в ActiveApartments");
 
+            // тестирование обновления описания квартиры
+            var newDescription = "теперь в центре москвы но чуть левее";
+            landlord.UpdateApartmentDetails(apartment, newDescription);
+            Console.WriteLine($"(UpdateApartmentDetails) обновлено описание: {apartment.Description.Value}");
+
+            // тестирование удаления квартиры
             if (!landlord.RemoveApartment(apartment))
-                throw new Exception("(removeApartment) объявление не снято");
+                throw new Exception("(RemoveApartment) квартира не была удалена");
 
-            Console.WriteLine("landlord протестирован");
+            if (landlord.ActiveApartments.Count != 0)
+                throw new Exception("квартира не была удалена из ActiveApartments");
+
+            Console.WriteLine("Landlord протестирован успешно");
         }
-
 
         static void TestApartment()
         {
-            Console.WriteLine("\nтестируем apartment.......");
+            Console.WriteLine("\nтестируем Apartment......");
 
             var landlord = new Landlord(Guid.NewGuid(), CreateTestUsername());
             var apartment = new Apartment(
@@ -96,31 +114,48 @@ namespace RentApartments.ConsoleTester
                 CreateTestTitle(),
                 CreateTestDescription(),
                 CreateTestAddress(),
-                CreateTestMoney(1500),
+                CreateTestMoney(35000),
                 landlord
             );
 
             landlord.AddApartment(apartment);
 
+            // тестирование изменения статуса
             apartment.SetUnavailable();
-            Console.WriteLine($"(setUnavailable) статус квартиры: {apartment.Status}");
+            Console.WriteLine($"(SetUnavailable) статус квартиры: {apartment.Status}");
 
             apartment.ChangeStatus(ApartmentStatus.Available);
-            Console.WriteLine($"(changeStatus) новый статус свободно: {apartment.Status}");
+            Console.WriteLine($"(ChangeStatus) новый статус: {apartment.Status}");
 
+            // тестирование запросов на аренду
             var tenant = new Tenant(Guid.NewGuid(), CreateTestUsername());
             var request = new RentRequest(apartment, tenant, landlord);
             apartment.AddRentRequest(request);
 
-            Console.WriteLine($"заявка на аренду подана. последняя заявка: {apartment.LastRequest.Status}");
+            Console.WriteLine($"(AddRentRequest) заявка на аренду подана. последняя заявка: {apartment.LastRequest?.Status}");
 
-            Console.WriteLine("тестировние apartment завершено");
+            // тестирование аренды квартиры
+            request.Approve();
+            apartment.SetRented(tenant);
+            Console.WriteLine($"(SetRented) статус после аренды: {apartment.Status}");
+
+            // тестирование невалидных переходов статуса
+            try
+            {
+                apartment.ChangeStatus(ApartmentStatus.Unavailable);
+                throw new Exception("не должен был разрешить переход из Rented в Unavailable");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"(Invalid status change) ожидаемая ошибка: {ex.Message}");
+            }
+
+            Console.WriteLine("Apartment протестирован успешно");
         }
-
 
         static void TestTenant()
         {
-            Console.WriteLine("\nтестируем tenant.......");
+            Console.WriteLine("\nтестируем Tenant...");
 
             var tenant = new Tenant(Guid.NewGuid(), CreateTestUsername());
             var landlord = new Landlord(Guid.NewGuid(), CreateTestUsername());
@@ -129,25 +164,36 @@ namespace RentApartments.ConsoleTester
                 CreateTestTitle(),
                 CreateTestDescription(),
                 CreateTestAddress(),
-                CreateTestMoney(),
+                CreateTestMoney(40000),
                 landlord
             );
 
             landlord.AddApartment(apartment);
 
+            // тестирование добавления квартиры в наблюдаемые
             tenant.AddObservableApartment(apartment);
-            Console.WriteLine($"просматриваемая квартира: {apartment.Title.Value}");
+            Console.WriteLine($"(AddObservableApartment) квартира добавлена в наблюдаемые: {apartment.Title.Value}");
 
+            if (tenant.ObservableApartments.Count != 1)
+                throw new Exception("квартира не была добавлена в ObservableApartments");
+
+            // тестирование создания запроса на аренду
             if (!tenant.TryRentApartment(apartment))
-                throw new Exception("не удалось создать заявку на аренду");
+                throw new Exception("(TryRentApartment) не удалось создать заявку на аренду");
 
-            Console.WriteLine("тестирование tenant завершено");
+            Console.WriteLine($"(TryRentApartment) заявка на аренду создана успешно");
+
+            // тестирование изменения имени пользователя
+            var newUsername = new Username("bot2000");
+            tenant.ChangeUsername(newUsername);
+            Console.WriteLine($"(ChangeUsername) новый username: {tenant.Username.Value}");
+
+            Console.WriteLine("Tenant протестирован успешно");
         }
-
 
         static void TestRentRequest()
         {
-            Console.WriteLine("\nтестируем rentRequest.......");
+            Console.WriteLine("\nтестируем RentRequest......");
 
             var landlord = new Landlord(Guid.NewGuid(), CreateTestUsername());
             var apartment = new Apartment(
@@ -155,7 +201,7 @@ namespace RentApartments.ConsoleTester
                 CreateTestTitle(),
                 CreateTestDescription(),
                 CreateTestAddress(),
-                CreateTestMoney(1200),
+                CreateTestMoney(45000),
                 landlord
             );
 
@@ -163,25 +209,36 @@ namespace RentApartments.ConsoleTester
 
             var tenant = new Tenant(Guid.NewGuid(), CreateTestUsername());
 
-            var request = new RentRequest(apartment, tenant, landlord);
+            var request = new RentRequest(apartment, tenant, landlord, "привет рим");
 
-            Console.WriteLine($"заявка подана:");
-            Console.WriteLine($" - apartment: {apartment.Title.Value}, address: {apartment.Address.Value}");
-            Console.WriteLine($" - tenant: {tenant.Username.Value}");
-            Console.WriteLine($" - landlord: {landlord.Username.Value}");
-            Console.WriteLine($" - status: {request.Status}");
+            Console.WriteLine($"создан RentRequest:");
+            Console.WriteLine($" - Apartment: {apartment.Title.Value}, Address: {apartment.Address.Value}");
+            Console.WriteLine($" - Tenant: {tenant.Username.Value}");
+            Console.WriteLine($" - Landlord: {landlord.Username.Value}");
+            Console.WriteLine($" - Status: {request.Status}");
+            Console.WriteLine($" - Message: {request.Message}");
 
+            // тестирование одобрения запроса
             request.Approve();
+            Console.WriteLine($"(Approve) статус после одобрения: {request.Status}");
 
-            Console.WriteLine($"(approve()) статус после одобрения: {request.Status}");
+            // тестирование повторного одобрения
+            try
+            {
+                request.Approve();
+                throw new Exception("не должен был разрешить повторное одобрение");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"(Double Approve) ожидаемая ошибка: {ex.Message}");
+            }
 
-            Console.WriteLine("тестирование rentRequest завершено");
+            Console.WriteLine("RentRequest протестирован успешно");
         }
-
 
         static void TestRentalAgreement()
         {
-            Console.WriteLine("\nтестируем rentalAgreement.......");
+            Console.WriteLine("\nтестируем RentalAgreement......");
 
             var landlord = new Landlord(Guid.NewGuid(), CreateTestUsername());
             var apartment = new Apartment(
@@ -189,7 +246,7 @@ namespace RentApartments.ConsoleTester
                 CreateTestTitle(),
                 CreateTestDescription(),
                 CreateTestAddress(),
-                CreateTestMoney(1500),
+                CreateTestMoney(50000),
                 landlord
             );
 
@@ -197,47 +254,34 @@ namespace RentApartments.ConsoleTester
 
             var tenant = new Tenant(Guid.NewGuid(), CreateTestUsername());
 
-            var startDate = DateTime.Now.AddDays(1);
-            var endDate = startDate.AddMonths(1);
+            var startDate = new DateTime(2023, 1, 1);
+
+            var endDate = DateTime.Now.AddDays(1);
 
             var agreement = new RentalAgreement(
                 apartment,
                 tenant,
                 landlord,
-                CreateTestMoney(1500),
+                CreateTestMoney(50000),
                 startDate,
-                DateTime.Now 
+                DateTime.Now
             );
 
-            Console.WriteLine($"договор аренды создан:");
-            Console.WriteLine($" - apartment: {apartment.Title.Value}");
-            Console.WriteLine($" - tenant: {tenant.Username.Value}");
-            Console.WriteLine($" - landlord: {landlord.Username.Value}");
-            Console.WriteLine($" - price: ${agreement.MonthlyRent.Value}");
-            Console.WriteLine($" - start date: {agreement.StartDate}");
-            Console.WriteLine($" - end date: {agreement.EndDate}");
-            Console.WriteLine($" - isActive: {agreement.IsActive}");
+            Console.WriteLine($"создан RentalAgreement:");
+            Console.WriteLine($" - Apartment: {apartment.Title.Value}");
+            Console.WriteLine($" - Tenant: {tenant.Username.Value}");
+            Console.WriteLine($" - Landlord: {landlord.Username.Value}");
+            Console.WriteLine($" - Price: {agreement.MonthlyRent.Value} р.");
+            Console.WriteLine($" - Start Date: {agreement.StartDate}");
+            Console.WriteLine($" - IsActive: {agreement.IsActive}");
 
+            // тестирование прекращения договора
             agreement.Terminate(endDate);
-            Console.WriteLine($"(terminate()) прекращено с валидной датой: {endDate}");
-            Console.WriteLine($"вызов isActive после прекращения: {agreement.IsActive}");
+            Console.WriteLine($"(Terminate) прекращено с валидной датой: {endDate}");
+            Console.WriteLine($" - End Date после прекращения: {agreement.EndDate}");
+            Console.WriteLine($"доступность после прекращения: {apartment.Status}");
 
-            var pastDate = DateTime.Now.AddDays(-1);
-
-            try
-            {
-                agreement.Terminate(pastDate);
-                Console.WriteLine($"(terminate()) прекращено с невалидной датой: {pastDate}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"ошибка при попытке terminate() с невалидной датой: {ex.Message}");
-            }
-
-            Console.WriteLine($"вызов isActive после попытки невалидного прекращения: {agreement.IsActive}");
-
-            Console.WriteLine("тестирование rentalAgreement завершено");
+            Console.WriteLine("RentalAgreement протестирован успешно");
         }
-
     }
 }

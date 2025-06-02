@@ -44,8 +44,9 @@ namespace RentApartments.Domain.Entities
             if (monthlyRent.Value <= 0)
                 throw new InvalidApartmentMonthlyRentException(this, monthlyRent);
 
-            if (status == ApartmentStatus.Available && landlord.ActiveApartments.Any(a => a.Address == address))
+            if (landlord?.ActiveApartments.Any(a => a.Address == address) == true && status == ApartmentStatus.Available)
                 throw new ApartmentAlreadyRentedException(this, address);
+
 
             if (landlord == null)
                 throw new ArgumentNullValueException(nameof(landlord));
@@ -86,12 +87,12 @@ namespace RentApartments.Domain.Entities
             return true;
         }
 
-        public bool SetRented()
+        public bool SetRented(Tenant tenant)
         {
             if (!IsAvailable)
                 throw new ApartmentIsNotAvailableException(this);
 
-            if (!_rentRequests.Any(r => r.Status == RentRequestStatus.Approved))
+            if (!_rentRequests.Any(r =>r.Status == RentRequestStatus.Approved && r.Tenant.Id == tenant.Id))
                 throw new ApartmentRentRequestMissingException(this);
 
             Status = ApartmentStatus.Rented;
@@ -127,10 +128,25 @@ namespace RentApartments.Domain.Entities
         {
             return (Status, newStatus) switch
             {
-                (ApartmentStatus.Available, ApartmentStatus.Rented) => _rentRequests.Any(r => r.Status == RentRequestStatus.Approved),
-                (ApartmentStatus.Rented, ApartmentStatus.Available) => false, 
+                // доступна → Арендована: требуется одобренный запрос
+                (ApartmentStatus.Available, ApartmentStatus.Rented) =>
+                    _rentRequests.Any(r => r.Status == RentRequestStatus.Approved),
+
+                // Доступна → Недоступна: всегда разрешено
+                (ApartmentStatus.Available, ApartmentStatus.Unavailable) => true,
+
+                // Арендована → Доступна: разрешено (освобождение квартиры)
+                (ApartmentStatus.Rented, ApartmentStatus.Available) => true,
+
+                // Недоступна → Доступна: всегда разрешено
                 (ApartmentStatus.Unavailable, ApartmentStatus.Available) => true,
-                (_, _) => true 
+
+                // Запрещённые переходы:
+                (ApartmentStatus.Rented, ApartmentStatus.Unavailable) => false,    // Сначала завершите аренду
+                (ApartmentStatus.Unavailable, ApartmentStatus.Rented) => false,    // Сначала сделайте доступной
+
+                // Все остальные случаи (включая повтор статуса) запрещены
+                _ => false
             };
         }
 

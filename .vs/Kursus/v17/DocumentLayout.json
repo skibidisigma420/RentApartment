@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{BB5657C8-F91A-4CEA-A9DD-0E3F4FA3182C}|ConsoleApp2\\ConsoleApp2.csproj|solutionrelative:consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|d:\\7878\\qwerty\\kurs.domain\\entities\\apartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|solutionrelative:kurs.domain\\entities\\apartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|d:\\7878\\qwerty\\kurs.domain\\entities\\landlord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|solutionrelative:kurs.domain\\entities\\landlord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|d:\\7878\\qwerty\\kurs.domain\\entities\\tenant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|solutionrelative:kurs.domain\\entities\\tenant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|d:\\7878\\qwerty\\kurs.domain\\entities\\rentalagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA8FB45D-D023-4273-B7B3-769CDBF3E8BB}|Kurs.Domain\\RentApartments.Domain.csproj|solutionrelative:kurs.domain\\entities\\rentalagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|d:\\7878\\qwerty\\rentapartments.infrastructure.entityframework\\migrations\\20250521120018_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{842F833F-58EC-4B0C-BA14-CD420E9067C9}|RentApartments.Infrastructure.EntityFramework\\RentApartments.Infrastructure.EntityFramework.csproj|solutionrelative:rentapartments.infrastructure.entityframework\\migrations\\20250521120018_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -42,15 +58,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250521120018_InitialCreate.cs",
-              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\20250521120018_InitialCreate.cs",
-              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Migrations\\20250521120018_InitialCreate.cs",
-              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\20250521120018_InitialCreate.cs",
-              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Migrations\\20250521120018_InitialCreate.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAowNgAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "RentalAgreement.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\RentalAgreement.cs",
+              "RelativeDocumentMoniker": "Kurs.Domain\\Entities\\RentalAgreement.cs",
+              "ToolTip": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\RentalAgreement.cs",
+              "RelativeToolTip": "Kurs.Domain\\Entities\\RentalAgreement.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAcwGIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T15:47:34.887Z"
+              "WhenOpened": "2025-06-01T20:20:25.237Z"
             },
             {
               "$type": "Document",
@@ -60,10 +76,59 @@
               "RelativeDocumentMoniker": "ConsoleApp2\\Program.cs",
               "ToolTip": "D:\\7878\\qwerty\\ConsoleApp2\\Program.cs",
               "RelativeToolTip": "ConsoleApp2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMBAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T16:53:46.508Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tenant.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\Tenant.cs",
+              "RelativeDocumentMoniker": "Kurs.Domain\\Entities\\Tenant.cs",
+              "ToolTip": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\Tenant.cs",
+              "RelativeToolTip": "Kurs.Domain\\Entities\\Tenant.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T17:57:44.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LandLord.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\LandLord.cs",
+              "RelativeDocumentMoniker": "Kurs.Domain\\Entities\\LandLord.cs",
+              "ToolTip": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\LandLord.cs",
+              "RelativeToolTip": "Kurs.Domain\\Entities\\LandLord.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwGkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T17:37:07.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Apartment.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\Apartment.cs",
+              "RelativeDocumentMoniker": "Kurs.Domain\\Entities\\Apartment.cs",
+              "ToolTip": "D:\\7878\\qwerty\\Kurs.Domain\\Entities\\Apartment.cs",
+              "RelativeToolTip": "Kurs.Domain\\Entities\\Apartment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:03:26.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250521120018_InitialCreate.cs",
+              "DocumentMoniker": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\20250521120018_InitialCreate.cs",
+              "RelativeDocumentMoniker": "RentApartments.Infrastructure.EntityFramework\\Migrations\\20250521120018_InitialCreate.cs",
+              "ToolTip": "D:\\7878\\qwerty\\RentApartments.Infrastructure.EntityFramework\\Migrations\\20250521120018_InitialCreate.cs",
+              "RelativeToolTip": "RentApartments.Infrastructure.EntityFramework\\Migrations\\20250521120018_InitialCreate.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAowNgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T15:47:34.887Z"
             }
           ]
         },

@@ -92,8 +92,6 @@ namespace RentApartments.Domain.Entities
             return true;
         }
 
-
-
         /// <summary>
         /// добавляет квартиру в избранное
         /// </summary>
